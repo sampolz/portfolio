@@ -5,8 +5,8 @@ export default function Home() {
       <nav className="flex justify-between items-center mb-16">
         <span className="text-sm font-medium">Your Name</span>
         <div className="flex gap-5">
-          <a href="https://github.com/yourusername" className="text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">GitHub</a>
-          <a href="https://linkedin.com/in/yourusername" className="text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">LinkedIn</a>
+          <a href="https://github.com/sampolz" className="text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">GitHub</a>
+          <a href="https://linkedin.com/in/sam-polyakov" className="text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">LinkedIn</a>
           <a href="/resume.pdf" className="text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">Resume</a>
         </div>
       </nav>

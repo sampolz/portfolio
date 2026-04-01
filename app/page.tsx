@@ -5,7 +5,7 @@ export default function Home() {
     <main className="max-w-2xl mx-auto px-6 py-16">
       {/* Nav */}
       <nav className="flex justify-between items-center mb-16">
-        <span className="text-xl font-medium">Sam Polyakov</span>
+        <span className="text-2xl font-medium">Sam Polyakov</span>
         <div className="flex items-center gap-5">
           <a href="https://github.com/sampolz" className="text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">GitHub</a>
           <a href="https://linkedin.com/in/sam-polyakov" className="text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">LinkedIn</a>
@@ -22,7 +22,7 @@ export default function Home() {
           , passionate about architecture, sculpture, and cool tech
         </p>
         <p className="text-sm leading-7 mb-4">
-          I spent this past summer interning at Apple and recieved a full-time return offer, but am looking for something new in the NYC or Boston area
+          I spent this past summer interning at Apple and recieved a full-time return offer, but am looking for something new in the NYC or Boston area.
         </p>
         <p className="text-sm leading-7">
           Feel free to reach out at{" "}

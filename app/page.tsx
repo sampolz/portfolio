@@ -25,7 +25,7 @@ export default function Home() {
         <p className="text-sm leading-7 mb-4">
           I spent this past summer interning at <a href="https://apple.com/" className="underline underline-offset-4">Apple</a>{" "}
           as a Software Engineer working on AppleConnect (Apple's internal SSO portal & VPN) and recieved a full-time return offer, but am 
-          <a className="font-semibold">looking for something new in the NYC or Boston area.</a>
+          <a className="font-bold"> looking for something new in the NYC or Boston area.</a>
         </p>
         <p className="text-sm leading-7 mb-4">
           Prior to Apple, I spent 2 summers interning at <a href="https://teradyne.com/" className="underline underline-offset-4">Teradyne</a>, also as a Software Engineer. 

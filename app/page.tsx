@@ -22,7 +22,7 @@ export default function Home() {
           , passionate about architecture, sculpture, and cool tech
         </p>
         <p className="text-sm leading-7 mb-4">
-          I spent this past summer interning at Apple and recieved a full-time return offer, but am looking for something new in the NYC or Boston area.]
+          I spent this past summer interning at Apple and recieved a full-time return offer, but am looking for something new in the NYC or Boston area
         </p>
         <p className="text-sm leading-7">
           Feel free to reach out at{" "}

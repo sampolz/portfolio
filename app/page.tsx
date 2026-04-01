@@ -29,7 +29,7 @@ export default function Home() {
         </p>
         <p className="text-sm leading-7 mb-4">
           Prior to Apple, I spent 2 summers interning at <a href="https://teradyne.com/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">Teradyne</a>
-          , also as a Software Engineer. In high school, I spent 3 summers interning in business development at 
+          , also as a Software Engineer. In high school, I spent 3 summers interning in business development at{" "}
           <a href="https://www.legendsoflearning.com/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">Legends of Learning</a> 
           , a startup building a platform of educational games for K-8 students.
         </p>

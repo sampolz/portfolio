@@ -18,18 +18,19 @@ export default function Home() {
       <section className="mb-14">
         <p className="text-sm leading-7 mb-4">
           I'm a senior CS major at{" "}
-          <a href="https://colby.edu/" className="underline underline-offset-4">Colby College</a>
+          <a href="https://colby.edu/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">Colby College</a>
           , passionate about architecture, sculpture, and education. At school, I am a TA and Tutor for the CS department, and president of the Coding Club 
           - a program where we go to the local high school and help out in CS classes.
         </p>
         <p className="text-sm leading-7 mb-4">
-          I spent this past summer interning at <a href="https://apple.com/" className="underline underline-offset-4">Apple</a>{" "}
+          I spent this past summer interning at <a href="https://apple.com/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">Apple</a>{" "}
           as a Software Engineer working on AppleConnect (Apple's internal SSO portal & VPN) and recieved a full-time return offer, but am 
           <a className="font-bold"> looking for something new in the NYC or Boston area.</a>
         </p>
         <p className="text-sm leading-7 mb-4">
-          Prior to Apple, I spent 2 summers interning at <a href="https://teradyne.com/" className="underline underline-offset-4">Teradyne</a>, also as a Software Engineer. 
-          In high school, I spent 3 summers interning in business development at <a href="https://www.legendsoflearning.com/" className="underline underline-offset-4">Legends of Learning</a> 
+          Prior to Apple, I spent 2 summers interning at <a href="https://teradyne.com/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">Teradyne</a>
+          , also as a Software Engineer. In high school, I spent 3 summers interning in business development at 
+          <a href="https://www.legendsoflearning.com/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">Legends of Learning</a> 
           , a startup building a platform of educational games for K-8 students.
         </p>
         <p className="text-sm leading-7">

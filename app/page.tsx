@@ -3,30 +3,30 @@ export default function Home() {
     <main className="max-w-2xl mx-auto px-6 py-16">
       {/* Nav */}
       <nav className="flex justify-between items-center mb-16">
-        <span className="text-sm font-medium">Your Name</span>
+        <span className="text-sm font-medium">Sam Polyakov</span>
         <div className="flex gap-5">
           <a href="https://github.com/sampolz" className="text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">GitHub</a>
           <a href="https://linkedin.com/in/sam-polyakov" className="text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">LinkedIn</a>
-          <a href="/resume.pdf" className="text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">Resume</a>
+          <a href="https://drive.google.com/file/d/1dbd2a8eLE3WiQ4Jy2qpTubPY2GPMZKZy/view?usp=sharing" className="text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">Resume</a>
         </div>
       </nav>
 
       {/* Bio */}
       <section className="mb-14">
         <p className="text-sm leading-7 mb-4">
-          I'm a <span className="text-neutral-400">[your role / student status]</span> at{" "}
-          <a href="#" className="underline underline-offset-4">Your School / Company</a>
-          , passionate about <span className="text-neutral-400">[your interests]</span>.
+          I'm a <span className="text-neutral-400">[senior CS major ]</span> at{" "}
+          <a href="https://colby.edu/" className="underline underline-offset-4">Colby College</a>
+          , passionate about <span className="text-neutral-400">[architecture, sculpture, and cool tech]</span>.
         </p>
         <p className="text-sm leading-7 mb-4">
           <span className="text-neutral-400">
-            [A second sentence about what you're working on or looking for. Keep it human — write like you talk.]
+            [I spent this past summer interning at Apple and recieved a full-time return offer, but am looking for something new in the NYC or Boston area.]
           </span>
         </p>
         <p className="text-sm leading-7">
           Feel free to reach out at{" "}
-          <a href="mailto:you@email.com" className="underline underline-offset-4">
-            you [at] email [dot] com
+          <a href="sam.polyakov@gmail.com" className="underline underline-offset-4">
+            sam.polyakov [at] gmail [dot] com
           </a>
           .
         </p>
@@ -93,15 +93,22 @@ export default function Home() {
 const work = [
   {
     company: "Apple",
-    role: "Your Role",
+    role: "Software Engineering Intern",
     year: "2025",
     url: "https://apple.com/",
     logo: "",
   },
   {
     company: "Teradyne",
-    role: "Your Role",
+    role: "Software Engineering Intern 2",
     year: "2024",
+    url: "https://teradyne.com/",
+    logo: "",
+  },
+    {
+    company: "Teradyne",
+    role: "Software Engineering Intern 1",
+    year: "2023",
     url: "https://teradyne.com/",
     logo: "",
   },

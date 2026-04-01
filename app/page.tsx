@@ -34,7 +34,7 @@ export default function Home() {
         </p>
         <p className="text-sm leading-7">
           Feel free to reach out at{" "}
-          <a href="sam.polyakov@gmail.com" className="underline underline-offset-4">
+          <a href="mailto:sam.polyakov@gmail.com" className="underline underline-offset-4">
             sam.polyakov [at] gmail [dot] com
           </a>
           !

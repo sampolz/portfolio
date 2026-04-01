@@ -1,5 +1,4 @@
 @import 'tailwindcss';
-@custom-variant dark (&:where(.dark, .dark *));
 
 ::selection {
   background-color: #47a3f3;
@@ -144,4 +143,46 @@ table {
 
 .title {
   text-wrap: balance;
+}
+
+/* Class-based dark mode fallback for Tailwind v4 alpha media-only dark utilities */
+html.dark .dark\:text-white {
+  color: #fff;
+}
+
+html.dark .dark\:bg-black {
+  background-color: #000;
+}
+
+html.dark .dark\:bg-neutral-800 {
+  background-color: #262626;
+}
+
+html.dark .dark\:border-neutral-800 {
+  border-color: #262626;
+}
+
+html.dark .dark\:divide-neutral-800 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #262626;
+}
+
+html.dark .dark\:hover\:text-neutral-100:hover {
+  color: #f5f5f5;
+}
+
+html.dark .prose a {
+  text-decoration-color: #525252;
+}
+
+html.dark .prose .anchor:after {
+  color: #404040;
+}
+
+html.dark .prose pre {
+  border-color: #171717;
+  background-color: #171717;
+}
+
+html.dark .prose p {
+  color: #e5e5e5;
 }

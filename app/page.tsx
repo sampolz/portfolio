@@ -23,16 +23,16 @@ export default function Home() {
           - a program where we go to the local high school and help out in CS classes.
         </p>
         <p className="text-sm leading-7 mb-4">
-          I spent this past summer interning at <a href="https://apple.com/" className="underline underline-offset-4">Apple </a>
-          as a Software Engineer and recieved a full-time return offer, but am <a className="font-semibold">looking for something new in the NYC or Boston area.</a>
+          I spent this past summer interning at <a href="https://apple.com/" className="underline underline-offset-4">Apple</a>
+           as a Software Engineer and recieved a full-time return offer, but am <a className="font-semibold">looking for something new in the NYC or Boston area.</a>
         </p>
         <p className="text-sm leading-7 mb-4">
-          Prior to Apple, I spent 2 summers interning at <a href="https://teradyne.com/" className="underline underline-offset-4">Teradyne,</a> also as a Software Engineer. 
-          In high school, I spent 3 summers interning in business development at <a href="https://www.legendsoflearning.com/" className="underline underline-offset-4">Legends of Learning,</a> 
-          a startup building a platform of educational games for K-8 students.
+          Prior to Apple, I spent 2 summers interning at <a href="https://teradyne.com/" className="underline underline-offset-4">Teradyne</a>, also as a Software Engineer. 
+          In high school, I spent 3 summers interning in business development at <a href="https://www.legendsoflearning.com/" className="underline underline-offset-4">Legends of Learning</a> 
+          , a startup building a platform of educational games for K-8 students.
         </p>
         <p className="text-sm leading-7">
-          Feel free to reach out to discuss potential opportunities, or just to chat at{" "}
+          Feel free to reach out at{" "}
           <a href="sam.polyakov@gmail.com" className="underline underline-offset-4">
             sam.polyakov [at] gmail [dot] com
           </a>

@@ -23,6 +23,13 @@ html.dark {
   --sh-keyword: #f47067;
   --sh-string: #0fa295;
   color-scheme: dark;
+  background-color: #000;
+  color: #fff;
+}
+
+html.dark body {
+  background-color: #000;
+  color: #fff;
 }
 
 html {

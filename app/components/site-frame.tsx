@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { ThemeToggle } from 'app/components/theme-toggle'
 
 export function SiteFrame({ children }: { children: React.ReactNode }) {
   return (
@@ -7,7 +8,7 @@ export function SiteFrame({ children }: { children: React.ReactNode }) {
         <Link href="/" className="text-sm font-medium">
           Sam Polyakov
         </Link>
-        <div className="flex gap-5">
+        <div className="flex items-center gap-5">
           <a
             href="/"
             className="text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
@@ -26,6 +27,7 @@ export function SiteFrame({ children }: { children: React.ReactNode }) {
           >
             Resume
           </a>
+          <ThemeToggle />
         </div>
       </nav>
 

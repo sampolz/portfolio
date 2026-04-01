@@ -42,12 +42,27 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={cx(
         'text-black bg-white dark:text-white dark:bg-black',
         GeistSans.variable,
         GeistMono.variable
       )}
     >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(() => {
+  try {
+    const storedTheme = localStorage.getItem('theme');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const shouldUseDark = storedTheme ? storedTheme === 'dark' : systemPrefersDark;
+    document.documentElement.classList.toggle('dark', shouldUseDark);
+  } catch (_) {}
+})();`,
+          }}
+        />
+      </head>
       <body className="antialiased">
         {children}
       </body>

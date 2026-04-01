@@ -1,13 +1,16 @@
+import { ThemeToggle } from 'app/components/theme-toggle'
+
 export default function Home() {
   return (
     <main className="max-w-2xl mx-auto px-6 py-16">
       {/* Nav */}
       <nav className="flex justify-between items-center mb-16">
-        <span className="text-sm font-medium">Sam Polyakov</span>
-        <div className="flex gap-5">
+        <span className="text-xl font-medium">Sam Polyakov</span>
+        <div className="flex items-center gap-5">
           <a href="https://github.com/sampolz" className="text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">GitHub</a>
           <a href="https://linkedin.com/in/sam-polyakov" className="text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">LinkedIn</a>
           <a href="https://drive.google.com/file/d/1dbd2a8eLE3WiQ4Jy2qpTubPY2GPMZKZy/view?usp=sharing" className="text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">Resume</a>
+          <ThemeToggle />
         </div>
       </nav>
 

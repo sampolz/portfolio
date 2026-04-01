@@ -82,10 +82,9 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="flex gap-4 pt-6 border-t border-neutral-100 dark:border-neutral-800">
-        <a href="https://x.com/yourusername" className="text-xs text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">Twitter / X</a>
-        <a href="https://github.com/yourusername" className="text-xs text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">GitHub</a>
-        <a href="https://linkedin.com/in/yourusername" className="text-xs text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">LinkedIn</a>
-        <span className="ml-auto text-xs text-neutral-400">© Your Name</span>
+        <a href="https://github.com/sampolz" className="text-xs text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">GitHub</a>
+        <a href="https://linkedin.com/in/sam-polyakov" className="text-xs text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">LinkedIn</a>
+        <span className="ml-auto text-xs text-neutral-400">© Sam Polyakov</span>
       </footer>
     </main>
   )
@@ -93,24 +92,24 @@ export default function Home() {
 
 const work = [
   {
-    company: "Company Name",
+    company: "Apple",
     role: "Your Role",
     year: "2025",
-    url: "#",
+    url: "https://apple.com/",
     logo: "",
   },
   {
-    company: "Company Name",
+    company: "Teradyne",
     role: "Your Role",
     year: "2024",
-    url: "#",
+    url: "https://teradyne.com/",
     logo: "",
   },
   {
-    company: "Company Name",
+    company: "Colby College",
     role: "Your Role",
     year: "2024",
-    url: "#",
+    url: "https://colby.edu/",
     logo: "",
   },
 ]

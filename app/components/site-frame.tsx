@@ -5,7 +5,7 @@ export function SiteFrame({ children }: { children: React.ReactNode }) {
     <main className="max-w-2xl mx-auto px-6 py-16">
       <nav className="flex justify-between items-center mb-16">
         <Link href="/" className="text-sm font-medium">
-          Your Name
+          Sam Polyakov
         </Link>
         <div className="flex gap-5">
           <a
@@ -33,19 +33,13 @@ export function SiteFrame({ children }: { children: React.ReactNode }) {
 
       <footer className="flex gap-4 pt-6 mt-16 border-t border-neutral-100 dark:border-neutral-800">
         <a
-          href="https://x.com/yourusername"
-          className="text-xs text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
-        >
-          Twitter / X
-        </a>
-        <a
-          href="https://github.com/yourusername"
+          href="https://github.com/sampolz"
           className="text-xs text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
         >
           GitHub
         </a>
         <a
-          href="https://linkedin.com/in/yourusername"
+          href="https://linkedin.com/in/sam-polyakov"
           className="text-xs text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
         >
           LinkedIn

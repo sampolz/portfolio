@@ -2,15 +2,13 @@ import './global.css'
 import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
-import { Analytics } from '@vercel/analytics/react'
-import { SpeedInsights } from '@vercel/speed-insights/next'
 import { baseUrl } from './sitemap'
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Next.js Portfolio Starter',
-    template: '%s | Next.js Portfolio Starter',
+    default: 'Sam Polyakov',
+    template: '%s | Sam Polyakov',
   },
   description: 'This is my portfolio.',
   openGraph: {
@@ -52,8 +50,6 @@ export default function RootLayout({
     >
       <body className="antialiased">
         {children}
-        <Analytics />
-        <SpeedInsights />
       </body>
     </html>
   )

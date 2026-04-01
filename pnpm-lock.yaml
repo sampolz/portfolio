@@ -20,12 +20,6 @@ importers:
       '@types/react-dom':
         specifier: 18.2.19
         version: 18.2.19
-      '@vercel/analytics':
-        specifier: ^1.1.3
-        version: 1.1.3
-      '@vercel/speed-insights':
-        specifier: ^1.0.9
-        version: 1.0.9(next@15.5.14(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react@19.2.3)
       geist:
         specifier: ^1.3.0
         version: 1.7.0(next@15.5.14(react-dom@19.2.3(react@19.2.3))(react@19.2.3))
@@ -402,32 +396,6 @@ packages:
 
   '@ungap/structured-clone@1.3.0':
     resolution: {integrity: sha512-WmoN8qaIAo7WTYWbAZuG8PYEhn5fkz7dZrqTBZ7dtt//lL2Gwms1IcnQ5yHqjDfX8Ft5j4YzDM23f87zBfDe9g==}
-
-  '@vercel/analytics@1.1.3':
-    resolution: {integrity: sha512-Z0l0y8TnUnnxr+on7oIMB9qQOoSJIniYMzUng6+NU8VVDkZ+kt2QGD5hzODwsuiRJAsjW528iUEtbWCEGkSCCg==}
-
-  '@vercel/speed-insights@1.0.9':
-    resolution: {integrity: sha512-f+XFP0O+aZ4Olj9h+BitkB1b4NJQaxtyCb69wWuDxytJHY6Pa4QtZPdBUftHOcajUCHRVeq062fk3MKXKtjNVQ==}
-    peerDependencies:
-      '@sveltejs/kit': ^1 || ^2
-      next: '>= 13'
-      react: ^18 || ^19
-      svelte: ^4
-      vue: ^3
-      vue-router: ^4
-    peerDependenciesMeta:
-      '@sveltejs/kit':
-        optional: true
-      next:
-        optional: true
-      react:
-        optional: true
-      svelte:
-        optional: true
-      vue:
-        optional: true
-      vue-router:
-        optional: true
 
   acorn-jsx@5.3.2:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
@@ -1264,15 +1232,6 @@ snapshots:
   '@types/unist@3.0.3': {}
 
   '@ungap/structured-clone@1.3.0': {}
-
-  '@vercel/analytics@1.1.3':
-    dependencies:
-      server-only: 0.0.1
-
-  '@vercel/speed-insights@1.0.9(next@15.5.14(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react@19.2.3)':
-    optionalDependencies:
-      next: 15.5.14(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      react: 19.2.3
 
   acorn-jsx@5.3.2(acorn@8.11.3):
     dependencies:

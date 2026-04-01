@@ -1,10 +1,16 @@
+import { SiteFrame } from 'app/components/site-frame'
+
 export default function NotFound() {
   return (
-    <section>
-      <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-        404 - Page Not Found
-      </h1>
-      <p className="mb-4">The page you are looking for does not exist.</p>
-    </section>
+    <SiteFrame>
+      <section>
+        <h1 className="mb-2 text-2xl font-medium tracking-tight">
+          404 - Page Not Found
+        </h1>
+        <p className="text-sm text-neutral-500">
+          The page you are looking for does not exist.
+        </p>
+      </section>
+    </SiteFrame>
   )
 }

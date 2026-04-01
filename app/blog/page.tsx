@@ -1,4 +1,5 @@
 import { BlogPosts } from 'app/components/posts'
+import { SiteFrame } from 'app/components/site-frame'
 
 export const metadata = {
   title: 'Blog',
@@ -7,9 +8,13 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <section>
-      <h1 className="font-semibold text-2xl mb-8 tracking-tighter">My Blog</h1>
-      <BlogPosts />
-    </section>
+    <SiteFrame>
+      <section>
+        <h1 className="text-xs font-medium uppercase tracking-widest text-neutral-400 mb-5">
+          Blog
+        </h1>
+        <BlogPosts />
+      </section>
+    </SiteFrame>
   )
 }

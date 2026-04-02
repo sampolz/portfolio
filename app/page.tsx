@@ -24,8 +24,8 @@ export default function Home() {
         </p>
         <p className="text-sm leading-7 mb-4">
           I spent this past summer interning at <a href="https://apple.com/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">Apple</a>{" "}
-          as a Software Engineer working on AppleConnect (Apple's internal SSO portal & VPN) and recieved a full-time return offer, but am 
-          <a className="font-bold"> looking for something new in the NYC or Boston area.</a>
+          as a Software Engineer working on AppleConnect (Apple's internal SSO portal & VPN) and recieved a full-time return offer. 
+          <a className="font-bold"> Today, I am looking for new opportunities in NYC or Boston.</a>
         </p>
         <p className="text-sm leading-7 mb-4">
           Prior to Apple, I spent 2 summers interning at <a href="https://teradyne.com/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">Teradyne</a>

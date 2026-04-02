@@ -55,8 +55,19 @@ export default function Home() {
               className="flex items-center gap-3 py-3 group"
             >
               <div className="w-7 h-7 rounded-md bg-neutral-100 dark:bg-neutral-800 flex-shrink-0 overflow-hidden">
-                {item.logo && (
-                  <img src={item.logo} alt={item.company} className="w-full h-full object-cover" />
+                {(item.logo || item.logoLight || item.logoDark) && (
+                  <>
+                    <img
+                      src={item.logoLight || item.logo || ''}
+                      alt={item.company}
+                      className="logo-light w-full h-full object-cover"
+                    />
+                    <img
+                      src={item.logoDark || item.logoLight || item.logo || ''}
+                      alt={item.company}
+                      className="logo-dark w-full h-full object-cover"
+                    />
+                  </>
                 )}
               </div>
               <div className="flex-1 min-w-0">
@@ -106,7 +117,8 @@ const work = [
     role: "Software Engineering Intern",
     year: "2025",
     url: "https://apple.com/",
-    logo: "logos/apple.png",
+    logoLight: "/logos/apple-light.png",
+    logoDark: "/logos/apple-dark.jpg",
   },
   {
     company: "Teradyne",

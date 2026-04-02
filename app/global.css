@@ -193,3 +193,15 @@ html.dark .prose pre {
 html.dark .prose p {
   color: #e5e5e5;
 }
+
+.logo-dark {
+  display: none;
+}
+
+html.dark .logo-light {
+  display: none;
+}
+
+html.dark .logo-dark {
+  display: block;
+}

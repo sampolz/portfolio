@@ -159,18 +159,13 @@ const work = [
 
 const projects = [
   {
-    name: "Project Name",
-    description: "One sentence about what this does and why it's interesting.",
-    url: "#",
+    name: "Personal Website",
+    description: "Made this site from scratch as an intro to web dev. Some AI + some me!",
+    url: "https://github.com/sampolz/portfolio",
   },
   {
-    name: "Project Name",
-    description: "One sentence about what this does and why it's interesting.",
-    url: "#",
-  },
-  {
-    name: "Project Name",
-    description: "One sentence about what this does and why it's interesting.",
-    url: "#",
+    name: "Neural Networks",
+    description: "Various NN projects I've worked on over the past year",
+    url: "https://github.com/sampolz/Neural-Networks",
   },
 ]

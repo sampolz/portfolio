@@ -58,6 +58,7 @@ export default function RootLayout({
     const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const shouldUseDark = storedTheme ? storedTheme === 'dark' : systemPrefersDark;
     document.documentElement.classList.toggle('dark', shouldUseDark);
+    document.documentElement.classList.toggle('light', !shouldUseDark);
   } catch (_) {}
 })();`,
           }}

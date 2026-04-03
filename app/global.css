@@ -32,6 +32,17 @@ html.dark body {
   color: #fff;
 }
 
+html.light {
+  color-scheme: light;
+  background-color: #fff;
+  color: #000;
+}
+
+html.light body {
+  background-color: #fff;
+  color: #000;
+}
+
 html {
   min-width: 360px;
 }
@@ -192,6 +203,48 @@ html.dark .prose pre {
 
 html.dark .prose p {
   color: #e5e5e5;
+}
+
+/* Force light mode when user selects it, even on dark-system devices */
+html.light .dark\:text-white {
+  color: #000;
+}
+
+html.light .dark\:bg-black {
+  background-color: #fff;
+}
+
+html.light .dark\:bg-neutral-800 {
+  background-color: #f5f5f5;
+}
+
+html.light .dark\:border-neutral-800 {
+  border-color: #f5f5f5;
+}
+
+html.light .dark\:divide-neutral-800 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #f5f5f5;
+}
+
+html.light .dark\:hover\:text-neutral-100:hover {
+  color: #171717;
+}
+
+html.light .prose a {
+  text-decoration-color: #a3a3a3;
+}
+
+html.light .prose .anchor:after {
+  color: #d4d4d4;
+}
+
+html.light .prose pre {
+  border-color: #e5e5e5;
+  background-color: #fafafa;
+}
+
+html.light .prose p {
+  color: #262626;
 }
 
 .logo-dark {

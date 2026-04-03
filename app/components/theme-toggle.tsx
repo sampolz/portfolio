@@ -10,7 +10,11 @@ function applyTheme(theme: Theme) {
 }
 
 export function ThemeToggle() {
-  const [theme, setTheme] = useState<Theme>('light')
+  const [theme, setTheme] = useState<Theme>(() =>
+    typeof document !== 'undefined' && document.documentElement.classList.contains('dark')
+      ? 'dark'
+      : 'light'
+  )
 
   useEffect(() => {
     const storedTheme = localStorage.getItem('theme')
@@ -29,7 +33,11 @@ export function ThemeToggle() {
   }, [])
 
   function toggleTheme() {
-    const nextTheme: Theme = theme === 'dark' ? 'light' : 'dark'
+    // Read from the DOM to avoid stale state mismatches on first interaction.
+    const currentTheme: Theme = document.documentElement.classList.contains('dark')
+      ? 'dark'
+      : 'light'
+    const nextTheme: Theme = currentTheme === 'dark' ? 'light' : 'dark'
     setTheme(nextTheme)
     localStorage.setItem('theme', nextTheme)
     applyTheme(nextTheme)

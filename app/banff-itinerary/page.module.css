@@ -1,0 +1,187 @@
+.page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(90, 138, 90, 0.18), transparent 32%),
+    radial-gradient(circle at top right, rgba(58, 124, 165, 0.12), transparent 26%),
+    linear-gradient(180deg, rgba(250, 248, 242, 0.96), rgba(255, 255, 255, 1));
+  color: rgb(23 23 23);
+}
+
+:global(html.dark) .page {
+  background:
+    radial-gradient(circle at top left, rgba(90, 138, 90, 0.2), transparent 28%),
+    radial-gradient(circle at top right, rgba(58, 124, 165, 0.15), transparent 24%),
+    linear-gradient(180deg, rgb(10 10 10), rgb(0 0 0));
+  color: rgb(245 245 245);
+}
+
+.shell {
+  max-width: 78rem;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.brand {
+  font-size: 1rem;
+  font-weight: 600;
+  color: inherit;
+  text-decoration: none;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.navLink {
+  font-size: 0.9rem;
+  color: rgb(115 115 115);
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+
+.navLink:hover {
+  color: rgb(23 23 23);
+}
+
+:global(html.dark) .navLink {
+  color: rgb(163 163 163);
+}
+
+:global(html.dark) .navLink:hover {
+  color: rgb(245 245 245);
+}
+
+.intro {
+  max-width: 44rem;
+  margin-bottom: 1.5rem;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 0.85rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgb(115 115 115);
+}
+
+.title {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.25rem, 6vw, 4.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+.dek {
+  margin-top: 0.9rem;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgb(82 82 82);
+}
+
+:global(html.dark) .dek {
+  color: rgb(212 212 212);
+}
+
+.frame {
+  overflow: hidden;
+  border: 1px solid rgba(115, 115, 115, 0.16);
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(12px);
+}
+
+:global(html.dark) .frame {
+  border-color: rgba(255, 255, 255, 0.08);
+  background: rgba(18, 18, 18, 0.8);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+}
+
+.frameTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid rgba(115, 115, 115, 0.12);
+}
+
+:global(html.dark) .frameTop {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+.dots {
+  display: flex;
+  gap: 0.45rem;
+}
+
+.dot {
+  width: 0.72rem;
+  height: 0.72rem;
+  border-radius: 999px;
+}
+
+.dotRed {
+  background: #ff5f57;
+}
+
+.dotAmber {
+  background: #ffbd2e;
+}
+
+.dotGreen {
+  background: #28c840;
+}
+
+.frameLabel {
+  font-size: 0.8rem;
+  color: rgb(115 115 115);
+}
+
+:global(html.dark) .frameLabel {
+  color: rgb(163 163 163);
+}
+
+.embed {
+  display: block;
+  width: 100%;
+  height: calc(100vh - 17rem);
+  min-height: 52rem;
+  border: 0;
+  background: white;
+}
+
+@media (max-width: 720px) {
+  .shell {
+    padding: 1.25rem 1rem 2rem;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+  }
+
+  .navLinks {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .embed {
+    height: 78vh;
+    min-height: 44rem;
+  }
+}

@@ -1,11 +1,20 @@
 import type { Metadata } from 'next'
-import { ItineraryClient } from './itinerary-client'
 
 export const metadata: Metadata = {
   title: 'Banff Campervan Itinerary',
-  description: 'A 7-day Banff and Jasper campervan itinerary artifact.',
+  description: 'Banff campervan itinerary artifact.',
 }
 
 export default function BanffItineraryPage() {
-  return <ItineraryClient />
+  return (
+    <iframe
+      src="/banff_campervan_final_itinerary.html"
+      title="Banff Campervan Itinerary"
+      style={{
+        border: 0,
+        width: '100%',
+        minHeight: '100vh',
+      }}
+    />
+  )
 }

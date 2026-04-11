@@ -1,0 +1,453 @@
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+* { box-sizing: border-box; margin: 0; padding: 0; }
+.wrap { font-family: 'DM Sans', sans-serif; color: var(--color-text-primary); padding: 0.5rem 0 1rem; }
+
+.header { margin-bottom: 1.5rem; }
+.header h1 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 600; letter-spacing: -0.5px; line-height: 1.2; }
+.header h1 em { font-style: italic; color: #5A8A5A; }
+.header p { font-size: 13px; color: var(--color-text-secondary); margin-top: 4px; font-weight: 300; }
+
+.day-tabs { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 1.25rem; }
+.dtab { font-size: 11px; font-weight: 500; padding: 5px 11px; border-radius: 20px; border: 0.5px solid var(--color-border-secondary); cursor: pointer; color: var(--color-text-secondary); background: transparent; transition: all 0.15s; white-space: nowrap; }
+.dtab.on { background: #3B5E3B; color: #fff; border-color: #3B5E3B; }
+
+.card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: 14px; overflow: hidden; display: none; }
+.card.on { display: block; }
+
+.card-head { padding: 1.1rem 1.25rem 0.9rem; border-bottom: 0.5px solid var(--color-border-tertiary); display: flex; align-items: flex-start; gap: 12px; }
+.day-badge { background: #3B5E3B; color: #fff; font-size: 10px; font-weight: 500; padding: 3px 9px; border-radius: 20px; letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap; margin-top: 3px; flex-shrink: 0; }
+.day-title { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 600; line-height: 1.25; }
+.day-sub { font-size: 12px; color: var(--color-text-secondary); margin-top: 2px; font-weight: 300; }
+
+.card-body { padding: 1rem 1.25rem; }
+
+.timeline { position: relative; }
+.timeline::before { content: ''; position: absolute; left: 7px; top: 6px; bottom: 6px; width: 1px; background: var(--color-border-tertiary); }
+.event { display: flex; gap: 14px; margin-bottom: 1rem; }
+.event:last-child { margin-bottom: 0; }
+.dot { width: 15px; height: 15px; border-radius: 50%; flex-shrink: 0; margin-top: 3px; display: flex; align-items: center; justify-content: center; z-index: 1; }
+.dot-forest { background: #3B5E3B; }
+.dot-lake { background: #3A7CA5; }
+.dot-amber { background: #C4913A; }
+.dot-stone { background: #7A6B5A; }
+.dot-inner { width: 5px; height: 5px; background: #fff; border-radius: 50%; }
+
+.event-content { flex: 1; }
+.event-time { font-size: 10px; color: var(--color-text-secondary); font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 1px; }
+.event-name { font-size: 14px; font-weight: 500; line-height: 1.3; }
+.event-desc { font-size: 12px; color: var(--color-text-secondary); margin-top: 3px; line-height: 1.6; font-weight: 300; }
+.tags { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 6px; }
+.tag { font-size: 10px; padding: 2px 7px; border-radius: 20px; font-weight: 500; }
+.tag-hike { background: rgba(59,94,59,0.1); color: #3B5E3B; }
+.tag-photo { background: rgba(58,124,165,0.12); color: #2a6a96; }
+.tag-food { background: rgba(196,145,58,0.12); color: #8a6520; }
+.tag-drive { background: rgba(122,107,90,0.15); color: #6a5a48; }
+
+.camp-box { background: rgba(59,94,59,0.06); border: 0.5px solid rgba(59,94,59,0.25); border-radius: 10px; padding: 10px 14px; margin-top: 0.9rem; }
+.camp-row { display: flex; align-items: flex-start; gap: 8px; }
+.camp-name { font-size: 13px; font-weight: 500; color: #3B5E3B; flex: 1; }
+.camp-badge { font-size: 10px; padding: 2px 8px; border-radius: 20px; font-weight: 500; white-space: nowrap; margin-top: 1px; }
+.badge-res { background: rgba(180,30,30,0.1); color: #b41e1e; }
+.badge-fcfs { background: rgba(196,145,58,0.12); color: #8a6520; }
+.camp-detail { font-size: 11px; color: var(--color-text-secondary); margin-top: 5px; line-height: 1.6; }
+.stars { color: #C4913A; font-size: 11px; margin-top: 2px; }
+
+.tip { background: rgba(58,124,165,0.07); border: 0.5px solid rgba(58,124,165,0.2); border-radius: 8px; padding: 9px 12px; margin-top: 0.75rem; font-size: 12px; color: #2a6a96; line-height: 1.6; }
+.tip strong { font-weight: 500; }
+.warn { background: rgba(196,145,58,0.07); border: 0.5px solid rgba(196,145,58,0.3); border-radius: 8px; padding: 9px 12px; margin-top: 0.75rem; font-size: 12px; color: #8a6520; line-height: 1.6; }
+
+.nav-row { display: flex; gap: 8px; margin-top: 1rem; justify-content: flex-end; }
+.nav-btn { font-size: 12px; padding: 6px 14px; border: 0.5px solid var(--color-border-secondary); border-radius: 20px; cursor: pointer; background: transparent; color: var(--color-text-primary); }
+</style>
+
+<div class="wrap">
+  <div class="header">
+    <h1>Banff + Jasper <em>by Campervan</em></h1>
+    <p>7 days · Pick up Calgary YYC · Icefields Parkway loop · Mid-June · Solar van, no hookups needed</p>
+  </div>
+
+  <div class="day-tabs">
+    <div class="dtab on" onclick="showDay(0)">Day 1</div>
+    <div class="dtab" onclick="showDay(1)">Day 2</div>
+    <div class="dtab" onclick="showDay(2)">Day 3</div>
+    <div class="dtab" onclick="showDay(3)">Day 4</div>
+    <div class="dtab" onclick="showDay(4)">Day 5</div>
+    <div class="dtab" onclick="showDay(5)">Day 6</div>
+    <div class="dtab" onclick="showDay(6)">Day 7</div>
+  </div>
+
+  <!-- DAY 1 -->
+  <div class="card on" id="d0">
+    <div class="card-head">
+      <div><div class="day-badge">Day 1</div></div>
+      <div>
+        <div class="day-title">Calgary → Banff</div>
+        <div class="day-sub">Pick up van · stock up · first mountain evening</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="timeline">
+        <div class="event">
+          <div class="dot dot-stone"><div class="dot-inner"></div></div>
+          <div class="event-content">
+            <div class="event-time">Morning</div>
+            <div class="event-name">Pick up campervan + big grocery run</div>
+            <div class="event-desc">Collect van in Calgary then stop at Superstore or Costco before heading to the mountains. Stock up for the full week — food is 2–3x more expensive inside the parks. Fill the tank fully.</div>
+            <div class="tags"><span class="tag tag-drive">drive</span></div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="dot dot-lake"><div class="dot-inner"></div></div>
+          <div class="event-content">
+            <div class="event-time">Afternoon</div>
+            <div class="event-name">Drive to Banff (1.5 hrs) · explore town</div>
+            <div class="event-desc">Walk Banff Ave, stop at the Visitor Centre for maps and trail conditions. Bow Falls is a 10 min walk from town — quick and worth it. Drive the Vermilion Lakes road at golden hour — flat mirror-like water reflecting Mount Rundle. First iconic Rocky Mountain photo of the trip.</div>
+            <div class="tags"><span class="tag tag-photo">photo</span></div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="dot dot-amber"><div class="dot-inner"></div></div>
+          <div class="event-content">
+            <div class="event-time">Evening</div>
+            <div class="event-name">Set up camp · cook dinner · campfire</div>
+            <div class="event-desc">Settle into your lakeside site. Fire permits are ~$11 CAD/night and include firewood at all Parks Canada campgrounds. First night with the mountains all around you.</div>
+            <div class="tags"><span class="tag tag-food">food</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="camp-box">
+        <div class="camp-row">
+          <span class="camp-name">⛺ Two Jack Lakeside — Banff National Park</span>
+          <span class="camp-badge badge-res">Book now</span>
+        </div>
+        <div class="stars">★★★★★</div>
+        <div class="camp-detail">On the shores of Two Jack Lake with Mount Rundle reflections at sunrise and sunset. Fits campervans up to 27ft. Has drinking water, flush toilets, hot showers, fire pits, bear lockers. ~$34 CAD/night + $11 fire permit. 10km from Banff town. Reserve at reservation.pc.gc.ca — lakefront sites disappear fast.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 2 -->
+  <div class="card" id="d1">
+    <div class="card-head">
+      <div><div class="day-badge">Day 2</div></div>
+      <div>
+        <div class="day-title">Moraine Lake Sunrise + Lake Louise</div>
+        <div class="day-sub">The two most iconic lakes in Canada · pre-book shuttle</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="timeline">
+        <div class="event">
+          <div class="dot dot-forest"><div class="dot-inner"></div></div>
+          <div class="event-content">
+            <div class="event-time">5:00 AM</div>
+            <div class="event-name">Moraine Lake sunrise</div>
+            <div class="event-desc">Pre-booked Parks Canada shuttle from Lake Louise Park & Ride — you cannot drive to Moraine Lake. Valley of Ten Peaks reflected in turquoise water at first light. Scramble the Rockpile (5 mins, no skills needed) for the classic shot. Spend 2+ hours here. This is the defining image of the trip.</div>
+            <div class="tags"><span class="tag tag-photo">photo</span><span class="tag tag-hike">hike</span></div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="dot dot-lake"><div class="dot-inner"></div></div>
+          <div class="event-content">
+            <div class="event-time">Mid-morning</div>
+            <div class="event-name">Consolation Lakes hike from Moraine Lake</div>
+            <div class="event-desc">5.8km round trip through boulder fields to a turquoise lake ringed by cliffs. Easy-moderate, low crowds, stunning. Start while still at Moraine before the shuttle back.</div>
+            <div class="tags"><span class="tag tag-hike">hike</span><span class="tag tag-photo">photo</span></div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="dot dot-amber"><div class="dot-inner"></div></div>
+          <div class="event-content">
+            <div class="event-time">Afternoon</div>
+            <div class="event-name">Lake Louise + Plain of Six Glaciers hike</div>
+            <div class="event-desc">Shuttle connects Moraine to Lake Louise. Walk the famous turquoise lakeshore then hike the Plain of Six Glaciers trail (13.8km round trip, moderate) to a teahouse perched beneath Victoria Glacier. Cash only at the teahouse — best hot chocolate you'll ever have. Ride or hike back down as light fades.</div>
+            <div class="tags"><span class="tag tag-hike">hike</span><span class="tag tag-photo">photo</span><span class="tag tag-food">food</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="camp-box">
+        <div class="camp-row">
+          <span class="camp-name">⛺ Two Jack Lakeside — Night 2</span>
+          <span class="camp-badge badge-res">Same site</span>
+        </div>
+        <div class="camp-detail">Return to your lakeside home base. Two nights here makes logistics simple — the van stays parked while you shuttle to Moraine Lake.</div>
+      </div>
+      <div class="warn">⚠️ <strong>Book Moraine Lake shuttle now</strong> — Parks Canada shuttle opens 2 days before your visit at 8am MT and sells out in minutes. Or book a guided sunrise tour which guarantees access. Search "Moraine Lake shuttle 2026" at parks.canada.ca.</div>
+    </div>
+  </div>
+
+  <!-- DAY 3 -->
+  <div class="card" id="d2">
+    <div class="card-head">
+      <div><div class="day-badge">Day 3</div></div>
+      <div>
+        <div class="day-title">Johnston Canyon + Drive to Waterfowl Lakes</div>
+        <div class="day-sub">Canyon hike · head north on Icefields Parkway</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="timeline">
+        <div class="event">
+          <div class="dot dot-forest"><div class="dot-inner"></div></div>
+          <div class="event-content">
+            <div class="event-time">7:30 AM</div>
+            <div class="event-name">Johnston Canyon — Lower Falls, Upper Falls + Ink Pots</div>
+            <div class="event-desc">Catwalks bolted into canyon walls lead past two dramatic waterfalls to the Ink Pots — five vivid turquoise mineral springs at the top. ~10km total, ~3.5 hrs. Leave early, parking fills by 9am. Note: Bow Valley Parkway has a vehicle restriction 8am–8pm May 1–June 25 on the eastern section — access Johnston via Castle Junction instead, signs will direct you.</div>
+            <div class="tags"><span class="tag tag-hike">hike</span><span class="tag tag-photo">photo</span></div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="dot dot-lake"><div class="dot-inner"></div></div>
+          <div class="event-content">
+            <div class="event-time">Midday</div>
+            <div class="event-name">Drive north → Icefields Parkway</div>
+            <div class="event-desc">Fill gas at Lake Louise village — last affordable gas before Saskatchewan River Crossing. Turn north onto the Icefields Parkway. First stop: Herbert Lake (mirror-flat reflections), then Hector Lake viewpoint. Download offline maps now — no cell service for most of the Parkway.</div>
+            <div class="tags"><span class="tag tag-drive">drive</span><span class="tag tag-photo">photo</span></div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="dot dot-amber"><div class="dot-inner"></div></div>
+          <div class="event-content">
+            <div class="event-time">Afternoon</div>
+            <div class="event-name">Bow Lake + arrive Waterfowl Lakes</div>
+            <div class="event-desc">Pull over at Bow Lake — first major Parkway stop, glacier-fed turquoise water with Crowfoot Glacier looming above, short flat walk along the shore. Then continue to Waterfowl Lakes. Arrive by 2pm to secure a site — it's first-come-first-served.</div>
+            <div class="tags"><span class="tag tag-photo">photo</span><span class="tag tag-drive">drive</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="camp-box">
+        <div class="camp-row">
+          <span class="camp-name">⛺ Waterfowl Lakes — Icefields Parkway, Banff NP</span>
+          <span class="camp-badge badge-fcfs">First come, first served</span>
+        </div>
+        <div class="stars">★★★★★</div>
+        <div class="camp-detail">Arguably the most beautiful campground in Canada. Sites right beside a turquoise lake with jaw-dropping mountain reflections — waking up here is genuinely surreal. 116 sites for tents and campervans. Has sani-dump + water fill (useful for your van). ~$26–32 CAD/night. Arrive before 2pm in June for a guaranteed spot.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 4 -->
+  <div class="card" id="d3">
+    <div class="card-head">
+      <div><div class="day-badge">Day 4</div></div>
+      <div>
+        <div class="day-title">Peyto Lake → Columbia Icefield → Parker Ridge</div>
+        <div class="day-sub">Three unmissable Parkway stops · sleep at the glacier</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="timeline">
+        <div class="event">
+          <div class="dot dot-lake"><div class="dot-inner"></div></div>
+          <div class="event-content">
+            <div class="event-time">Morning</div>
+            <div class="event-name">Peyto Lake viewpoint</div>
+            <div class="event-desc">20 mins north of camp. Short walk (15 mins each way) to a viewpoint above a wolf-head shaped glacial lake in electric blue-green. One of the most photographed spots on earth. Go before the tour buses roll in — the early light is extraordinary anyway.</div>
+            <div class="tags"><span class="tag tag-photo">photo</span></div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="dot dot-stone"><div class="dot-inner"></div></div>
+          <div class="event-content">
+            <div class="event-time">Midday</div>
+            <div class="event-name">Saskatchewan River Crossing — gas + food</div>
+            <div class="event-desc">The only gas station between Lake Louise and Jasper. Fill up regardless of how full you are. Basic café here too. Then continue north toward the Columbia Icefield.</div>
+            <div class="tags"><span class="tag tag-food">food</span><span class="tag tag-drive">drive</span></div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="dot dot-forest"><div class="dot-inner"></div></div>
+          <div class="event-content">
+            <div class="event-time">Afternoon</div>
+            <div class="event-name">Columbia Icefield + Athabasca Glacier</div>
+            <div class="event-desc">Largest icefield in the Canadian Rockies. Walk right up to the toe of the Athabasca Glacier for free — markers showing how far it's retreated are genuinely sobering. Optional: Ice Explorer bus onto the glacier surface (~$75 CAD) or Glacier Skywalk glass platform (~$30 CAD). The walk-up alone is worth it.</div>
+            <div class="tags"><span class="tag tag-photo">photo</span><span class="tag tag-hike">hike</span></div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="dot dot-amber"><div class="dot-inner"></div></div>
+          <div class="event-content">
+            <div class="event-time">Late afternoon</div>
+            <div class="event-name">Parker Ridge hike</div>
+            <div class="event-desc">3km south of the Icefields Centre. Short steep hike (4.8km round trip, 250m gain, ~2 hrs) above treeline to a ridge with sweeping views of the Saskatchewan Glacier and the whole Columbia Icefield system. Best bang-for-effort hike on the entire Parkway.</div>
+            <div class="tags"><span class="tag tag-hike">hike</span><span class="tag tag-photo">photo</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="camp-box">
+        <div class="camp-row">
+          <span class="camp-name">⛺ Wilcox Creek — Columbia Icefield, Jasper NP</span>
+          <span class="camp-badge badge-fcfs">First come, first served</span>
+        </div>
+        <div class="stars">★★★★★</div>
+        <div class="camp-detail">46 sites at the base of the Columbia Icefield — some with direct glacier views. Fits campervans under 27ft. Pit toilets, cooking shelters, fire pits. ~$26 CAD/night. Windy but extraordinary. You're sleeping at the largest icefield in the Rockies. Arrive by noon to be sure of a spot.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 5 -->
+  <div class="card" id="d4">
+    <div class="card-head">
+      <div><div class="day-badge">Day 5</div></div>
+      <div>
+        <div class="day-title">Athabasca Falls → Jasper Town</div>
+        <div class="day-sub">Final Parkway stretch · two waterfalls · arrive Jasper</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="timeline">
+        <div class="event">
+          <div class="dot dot-lake"><div class="dot-inner"></div></div>
+          <div class="event-content">
+            <div class="event-time">Morning</div>
+            <div class="event-name">Sunwapta Falls + Athabasca Falls</div>
+            <div class="event-desc">Two roaring waterfalls in the northern stretch. Sunwapta plunges into a narrow canyon — 15 min walk. Athabasca Falls is the most powerful waterfall in the Rockies, carving through a basalt gorge — 10 min walk and completely spectacular. Both uncrowded in the early morning.</div>
+            <div class="tags"><span class="tag tag-photo">photo</span><span class="tag tag-hike">hike</span></div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="dot dot-forest"><div class="dot-inner"></div></div>
+          <div class="event-content">
+            <div class="event-time">Midday</div>
+            <div class="event-name">Arrive Jasper townsite</div>
+            <div class="event-desc">Smaller and way less commercial than Banff — it has a real town feel. Restock van at the IGA grocery store. Lunch at Jasper Brewing Company (first national park brewery in Canada, great food). Walk the main street, pick up any supplies.</div>
+            <div class="tags"><span class="tag tag-food">food</span></div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="dot dot-amber"><div class="dot-inner"></div></div>
+          <div class="event-content">
+            <div class="event-time">Afternoon</div>
+            <div class="event-name">Pyramid Lake + Patricia Lake</div>
+            <div class="event-desc">7km from Jasper. Two beautiful mountain lakes with stunning reflections. Walk the short bridge out to Pyramid Island — classic sunset spot. Elk and deer commonly wander through at dusk. Great golden hour light on the peaks.</div>
+            <div class="tags"><span class="tag tag-photo">photo</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="camp-box">
+        <div class="camp-row">
+          <span class="camp-name">⛺ Whistlers — Jasper National Park</span>
+          <span class="camp-badge badge-res">Book now</span>
+        </div>
+        <div class="stars">★★★</div>
+        <div class="camp-detail">Largest campground in Jasper (781 sites), recently renovated. Has hot showers, sani-dump, trail into town. ~$35–42 CAD/night unserviced. Not the prettiest but the most convenient for two nights in Jasper. Operating at reduced capacity in 2026 due to 2024 wildfire — book as early as possible at reservation.pc.gc.ca.</div>
+      </div>
+      <div class="warn">⚠️ <strong>Whistlers reduced capacity in 2026</strong> due to Jasper wildfire recovery. If it's sold out, try Wapiti Campground (also near Jasper town) or Honeymoon Lake (~30km south, beautiful lakeside setting, first-come-first-served).</div>
+    </div>
+  </div>
+
+  <!-- DAY 6 -->
+  <div class="card" id="d5">
+    <div class="card-head">
+      <div><div class="day-badge">Day 6</div></div>
+      <div>
+        <div class="day-title">Maligne Lake + Maligne Canyon</div>
+        <div class="day-sub">Spirit Island boat cruise · deepest canyon · dark skies</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="timeline">
+        <div class="event">
+          <div class="dot dot-lake"><div class="dot-inner"></div></div>
+          <div class="event-content">
+            <div class="event-time">Morning</div>
+            <div class="event-name">Maligne Lake — Spirit Island cruise</div>
+            <div class="event-desc">45 min drive from Jasper. Canada's second largest natural lake — 22km long, ringed by snow-capped peaks with glaciers pouring down. Spirit Island boat cruise (~$80 CAD/person, pre-book) takes you to the most photographed island in Canada, perfectly framed in a turquoise inlet. One of those experiences that genuinely lives up to the hype. Book at banffjaspercollection.com.</div>
+            <div class="tags"><span class="tag tag-photo">photo</span></div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="dot dot-forest"><div class="dot-inner"></div></div>
+          <div class="event-content">
+            <div class="event-time">Afternoon</div>
+            <div class="event-name">Maligne Canyon hike</div>
+            <div class="event-desc">On the drive back. Deepest accessible canyon in the Rockies — 55m of sheer limestone walls with six bridges crossing at different levels and waterfalls thundering below. Walk to the 4th or 6th bridge for the full experience (~7km round trip). Completely different aesthetic from anything else on the trip.</div>
+            <div class="tags"><span class="tag tag-hike">hike</span><span class="tag tag-photo">photo</span></div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="dot dot-amber"><div class="dot-inner"></div></div>
+          <div class="event-content">
+            <div class="event-time">Evening</div>
+            <div class="event-name">Jasper dark sky viewing</div>
+            <div class="event-desc">Jasper is a UNESCO Dark Sky Preserve — one of the largest in the world. In mid-June it doesn't fully darken until ~11pm but if you stay up the stars are extraordinary. Drive a few km from camp to escape any glow from town. No equipment needed.</div>
+            <div class="tags"><span class="tag tag-photo">photo</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="camp-box">
+        <div class="camp-row">
+          <span class="camp-name">⛺ Whistlers — Night 2</span>
+          <span class="camp-badge badge-res">Same site</span>
+        </div>
+        <div class="camp-detail">Second night in Jasper. Use the showers, do laundry if needed. Cook a proper dinner in camp — Jasper restaurants are pricey. The Downstream Bar if you want one last dinner out in town.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 7 -->
+  <div class="card" id="d6">
+    <div class="card-head">
+      <div><div class="day-badge">Day 7</div></div>
+      <div>
+        <div class="day-title">Valley of Five Lakes → Calgary → Fly Home</div>
+        <div class="day-sub">Last morning hike · 4 hr drive · return van</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="timeline">
+        <div class="event">
+          <div class="dot dot-forest"><div class="dot-inner"></div></div>
+          <div class="event-content">
+            <div class="event-time">7:00 AM</div>
+            <div class="event-name">Valley of Five Lakes hike</div>
+            <div class="event-desc">One of Jasper's best easy hikes — 4.5km loop through forest to five lakes each a different shade of teal and turquoise. About 1.5 hrs. Beautiful and not crowded first thing in the morning. Perfect final hike before the drive back.</div>
+            <div class="tags"><span class="tag tag-hike">hike</span><span class="tag tag-photo">photo</span></div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="dot dot-stone"><div class="dot-inner"></div></div>
+          <div class="event-content">
+            <div class="event-time">Mid-morning</div>
+            <div class="event-name">Drive Jasper → Calgary via Hwy 16 (4–4.5 hrs)</div>
+            <div class="event-desc">East through the foothills back to Calgary. Stop in Hinton for coffee. Clean out the van before returning — most companies charge cleaning fees if left messy. Return van at Calgary depot.</div>
+            <div class="tags"><span class="tag tag-drive">drive</span></div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="dot dot-amber"><div class="dot-inner"></div></div>
+          <div class="event-content">
+            <div class="event-time">Afternoon</div>
+            <div class="event-name">Fly home from Calgary YYC</div>
+            <div class="event-desc">Book an afternoon or evening flight — don't cut it close. Allow 2.5 hrs at the airport. The van depot to YYC is typically 15–30 mins.</div>
+          </div>
+        </div>
+      </div>
+      <div class="camp-box">
+        <div class="camp-row">
+          <span class="camp-name">💰 Full week camping cost</span>
+        </div>
+        <div class="camp-detail">Two Jack Lakeside ×2 nights: ~$90 CAD · Waterfowl Lakes ×1: ~$30 CAD · Wilcox Creek ×1: ~$26 CAD · Whistlers ×2: ~$80 CAD · Total: ~$226 CAD (~$165 USD) for the week · vs $2,000+ in hotels · If your dates fall after June 19: free park admission + 25% off camping saves even more.</div>
+      </div>
+      <div class="tip"><strong>Book right now:</strong> Two Jack Lakeside and Whistlers are both reservable at reservation.pc.gc.ca. Waterfowl and Wilcox Creek are first-come-first-served — just arrive before noon each day. Also book the Moraine Lake shuttle and Spirit Island cruise ASAP — both sell out weeks in advance.</div>
+    </div>
+  </div>
+
+  <div class="nav-row">
+    <button class="nav-btn" onclick="prevDay()">← Prev</button>
+    <button class="nav-btn" onclick="nextDay()">Next →</button>
+  </div>
+</div>
+
+<script>
+let cur = 0;
+function showDay(n) {
+  cur = n;
+  document.querySelectorAll('.card').forEach((c,i) => c.classList.toggle('on', i===n));
+  document.querySelectorAll('.dtab').forEach((t,i) => t.classList.toggle('on', i===n));
+}
+function nextDay() { if(cur < 6) showDay(cur+1); }
+function prevDay() { if(cur > 0) showDay(cur-1); }
+</script>

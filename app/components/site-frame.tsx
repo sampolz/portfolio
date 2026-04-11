@@ -16,10 +16,10 @@ export function SiteFrame({ children }: { children: React.ReactNode }) {
             Home
           </a>
           <a
-            href="/blog"
+            href="/banff-itinerary"
             className="text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
           >
-            Blog
+            Banff
           </a>
           <a
             href="/resume.pdf"

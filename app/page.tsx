@@ -7,6 +7,8 @@ export default function Home() {
       <nav className="flex justify-between items-center mb-12">
         <span className="text-2xl font-medium">Sam Polyakov</span>
         <div className="flex items-center gap-5">
+          <a href="/" className="text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">Home</a>
+          <a href="/banff-itinerary" className="text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">Banff</a>
           <a href="https://github.com/sampolz" target="_blank" rel="noopener noreferrer" className="text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">GitHub</a>
           <a href="https://linkedin.com/in/sam-polyakov" target="_blank" rel="noopener noreferrer" className="text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">LinkedIn</a>
           <a href="https://drive.google.com/file/d/1dbd2a8eLE3WiQ4Jy2qpTubPY2GPMZKZy/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">Resume</a>
@@ -157,11 +159,6 @@ const work = [
 ]
 
 const projects = [
-  {
-    name: "Banff Campervan Itinerary",
-    description: "An interactive page built from a custom Banff + Jasper road trip itinerary artifact.",
-    url: "/banff-itinerary",
-  },
   {
     name: "Personal Website",
     description: "Made this site from scratch as an intro to web dev. Some AI + some me!",

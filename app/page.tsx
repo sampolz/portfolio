@@ -34,6 +34,10 @@ export default function Home() {
           <a href="https://www.legendsoflearning.com/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">Legends of Learning</a> 
           , a startup building a platform of educational games for K-8 students.
         </p>
+        <p className="text-sm leading-7 mb-4">
+          I'm also planning a trip to Banff National Park with my girlfriend. Check out the 
+          <a href="/banff-itinerary" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">intinerary</a>!
+        </p>
         <p className="text-sm leading-7">
           Feel free to reach out at{" "}
           <a href="mailto:sam.polyakov@gmail.com" className="underline underline-offset-4">

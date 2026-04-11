@@ -398,7 +398,6 @@ export function ItineraryClient() {
       </nav>
 
       <section className={styles.shell}>
-        <div className={styles.eyebrow}>Travel artifact</div>
         <h1 className={styles.title}>
           Banff + Jasper <em>by Campervan</em>
         </h1>

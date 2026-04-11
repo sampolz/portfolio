@@ -402,7 +402,7 @@ export function ItineraryClient() {
           Banff + Jasper <em>by Campervan</em>
         </h1>
         <p className={styles.dek}>
-          7 days · Pick up Calgary YYC · Icefields Parkway loop · Mid-June · Solar van, no hookups needed
+          7 days · Icefields Parkway loop · Mid-June
         </p>
 
         <div className={styles.tabs} aria-label="Day selector">

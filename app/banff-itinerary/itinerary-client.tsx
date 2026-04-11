@@ -7,7 +7,7 @@ import styles from './itinerary.module.css'
 
 type TagTone = 'hike' | 'photo' | 'food' | 'drive'
 type DotTone = 'forest' | 'lake' | 'amber' | 'stone'
-type BadgeTone = 'res' | 'fcfs'
+type BadgeTone = 'res' | 'fcfs' | 'booked'
 
 type EventItem = {
   time: string
@@ -35,12 +35,32 @@ type DayItem = {
 
 const days: DayItem[] = [
   {
+    badge: 'Day 0',
+    title: 'Fly to Calgary',
+    events: [
+      {
+        time: '6:30pm',
+        name: 'BOS → YYC',
+        description:
+          'WS1625 BOS-YYC. Land at 10pm.',
+        tone: 'amber',
+      },
+    ],
+    camp: {
+      name: '🏨 Hotel night!',
+      badge: 'NEED TO BOOK',
+      badgeTone: 'res',
+      detail:
+        'Alyssa Bobissa\'s job to find dis',
+    },
+  },
+  {
     badge: 'Day 1',
     title: 'Calgary → Banff',
     subtitle: 'Pick up van · stock up · first mountain evening',
     events: [
       {
-        time: 'Morning',
+        time: '8:00am',
         name: 'Pick up campervan + big grocery run',
         description:
           'Collect van in Calgary then stop at Superstore or Costco before heading to the mountains. Stock up for the full week — food is 2–3x more expensive inside the parks. Fill the tank fully.',
@@ -59,18 +79,17 @@ const days: DayItem[] = [
         time: 'Evening',
         name: 'Set up camp · cook dinner · campfire',
         description:
-          'Settle into your lakeside site. Fire permits are ~$11 CAD/night and include firewood at all Parks Canada campgrounds. First night with the mountains all around you.',
+          'Settle into our campsite. Booking includes fire permit + wood. First night! 🕺🕺🕺',
         tone: 'amber',
         tags: [{ label: 'food', tone: 'food' }],
       },
     ],
     camp: {
-      name: '⛺ Two Jack Lakeside — Banff National Park',
-      badge: 'Book now',
-      badgeTone: 'res',
-      stars: '★★★★★',
+      name: '⛺ Tunnel Mountain Village 1 — Banff National Park',
+      badge: 'Booked',
+      badgeTone: 'booked',
       detail:
-        'On the shores of Two Jack Lake with Mount Rundle reflections at sunrise and sunset. Fits campervans up to 27ft. Has drinking water, flush toilets, hot showers, fire pits, bear lockers. ~$34 CAD/night + $11 fire permit. 10km from Banff town. Reserve at reservation.pc.gc.ca — lakefront sites disappear fast.',
+        'Site B45. Should have pretty views :)',
     },
   },
   {
@@ -82,7 +101,7 @@ const days: DayItem[] = [
         time: '5:00 AM',
         name: 'Moraine Lake sunrise',
         description:
-          'Pre-booked Parks Canada shuttle from Lake Louise Park & Ride — you cannot drive to Moraine Lake. Valley of Ten Peaks reflected in turquoise water at first light. Scramble the Rockpile (5 mins, no skills needed) for the classic shot. Spend 2+ hours here. This is the defining image of the trip.',
+          'BOOKING ON WEDNESDAY. Pre-booked Parks Canada shuttle from Lake Louise Park & Ride. Cannot drive to Moraine Lake. Valley of Ten Peaks reflected in turquoise water at first light. Scramble the Rockpile. Spend 2+ hours here. Will be lit.',
         tone: 'forest',
         tags: [
           { label: 'photo', tone: 'photo' },
@@ -104,7 +123,7 @@ const days: DayItem[] = [
         time: 'Afternoon',
         name: 'Lake Louise + Plain of Six Glaciers hike',
         description:
-          "Shuttle connects Moraine to Lake Louise. Walk the famous turquoise lakeshore then hike the Plain of Six Glaciers trail (13.8km round trip, moderate) to a teahouse perched beneath Victoria Glacier. Cash only at the teahouse — best hot chocolate you'll ever have. Ride or hike back down as light fades.",
+          "Shuttle connects Moraine to Lake Louise. Walk the famous turquoise lakeshore then hike the Plain of Six Glaciers trail (13.8km round trip, moderate) to a teahouse perched beneath Victoria Glacier. Cash only at the teahouse. 'Best hot chocolate you'll ever have' :D (sorry Alyssa). Ride or hike back down as light fades.",
         tone: 'amber',
         tags: [
           { label: 'hike', tone: 'hike' },
@@ -114,14 +133,14 @@ const days: DayItem[] = [
       },
     ],
     camp: {
-      name: '⛺ Two Jack Lakeside — Night 2',
-      badge: 'Same site',
-      badgeTone: 'res',
+      name: '⛺ Tunnel Mountain Village 1 — Night 2',
+      badge: 'Booked',
+      badgeTone: 'booked',
       detail:
-        'Return to your lakeside home base. Two nights here makes logistics simple — the van stays parked while you shuttle to Moraine Lake.',
+        'Return to B45. Two nights here!',
     },
     warning:
-      '⚠️ Book Moraine Lake shuttle now — Parks Canada shuttle opens 2 days before your visit at 8am MT and sells out in minutes. Or book a guided sunrise tour which guarantees access. Search "Moraine Lake shuttle 2026" at parks.canada.ca.',
+      '⚠️ Book Moraine Lake shuttle now — Parks Canada shuttle opens April 15 or  2 days before our visit at 8am MT and sells out in minutes. Or book a guided sunrise tour which guarantees access. Search "Moraine Lake shuttle 2026" at parks.canada.ca.',
   },
   {
     badge: 'Day 3',
@@ -132,7 +151,7 @@ const days: DayItem[] = [
         time: '7:30 AM',
         name: 'Johnston Canyon — Lower Falls, Upper Falls + Ink Pots',
         description:
-          'Catwalks bolted into canyon walls lead past two dramatic waterfalls to the Ink Pots — five vivid turquoise mineral springs at the top. ~10km total, ~3.5 hrs. Leave early, parking fills by 9am. Note: Bow Valley Parkway has a vehicle restriction 8am–8pm May 1–June 25 on the eastern section — access Johnston via Castle Junction instead, signs will direct you.',
+          'Catwalks bolted into canyon walls lead past two dramatic waterfalls to the Ink Pots - five vivid turquoise mineral springs at the top. ~10km total, ~3.5 hrs. Leave early, parking fills by 9am. Note: Bow Valley Parkway has a vehicle restriction on the eastern section — access Johnston via Castle Junction instead, signs will direct.',
         tone: 'forest',
         tags: [
           { label: 'hike', tone: 'hike' },
@@ -143,7 +162,7 @@ const days: DayItem[] = [
         time: 'Midday',
         name: 'Drive north → Icefields Parkway',
         description:
-          'Fill gas at Lake Louise village — last affordable gas before Saskatchewan River Crossing. Turn north onto the Icefields Parkway. First stop: Herbert Lake (mirror-flat reflections), then Hector Lake viewpoint. Download offline maps now — no cell service for most of the Parkway.',
+          'Fill gas at Lake Louise village — last affordable gas before Saskatchewan River Crossing. Turn north onto the Icefields Parkway. First stop: Herbert Lake (mirror-flat reflections), then Hector Lake viewpoint. No cell service after this point until Jasper.',
         tone: 'lake',
         tags: [
           { label: 'drive', tone: 'drive' },
@@ -154,7 +173,7 @@ const days: DayItem[] = [
         time: 'Afternoon',
         name: 'Bow Lake + arrive Waterfowl Lakes',
         description:
-          "Pull over at Bow Lake — first major Parkway stop, glacier-fed turquoise water with Crowfoot Glacier looming above, short flat walk along the shore. Then continue to Waterfowl Lakes. Arrive by 2pm to secure a site — it's first-come-first-served.",
+          "Pull over at Bow Lake, our first major Parkway stop, glacier-fed turquoise water with Crowfoot Glacier looming above, short flat walk along the shore. Then continue to Waterfowl Lakes. Arrive by 2pm to secure a site — it's first-come-first-served. Then chill day :). Need to bring/cook food.",
         tone: 'amber',
         tags: [
           { label: 'photo', tone: 'photo' },
@@ -163,24 +182,23 @@ const days: DayItem[] = [
       },
     ],
     camp: {
-      name: '⛺ Waterfowl Lakes — Icefields Parkway, Banff NP',
+      name: '⛺ Waterfowl Lakes — Icefields Parkway, Banff',
       badge: 'First come, first served',
       badgeTone: 'fcfs',
-      stars: '★★★★★',
       detail:
-        'Arguably the most beautiful campground in Canada. Sites right beside a turquoise lake with jaw-dropping mountain reflections — waking up here is genuinely surreal. 116 sites for tents and campervans. Has sani-dump + water fill (useful for your van). ~$26–32 CAD/night. Arrive before 2pm in June for a guaranteed spot.',
+        'Arguably the most beautiful campground in Canada. Sites right beside a turquoise lake with mountain reflections. 116 sites for tents and campervans. Has sani-dump + water fill (prob won\'t need). ~$26–32 CAD/night. Arrive before 2pm in June for a guaranteed spot.',
     },
   },
   {
     badge: 'Day 4',
     title: 'Peyto Lake → Columbia Icefield → Parker Ridge',
-    subtitle: 'Three unmissable Parkway stops · sleep at the glacier',
+    subtitle: 'Three unmissable Parkway stops',
     events: [
       {
         time: 'Morning',
         name: 'Peyto Lake viewpoint',
         description:
-          '20 mins north of camp. Short walk (15 mins each way) to a viewpoint above a wolf-head shaped glacial lake in electric blue-green. One of the most photographed spots on earth. Go before the tour buses roll in — the early light is extraordinary anyway.',
+          '20 mins north of camp. Short walk (15 mins each way) to a viewpoint above a wolf-head shaped glacial lake in electric blue-green. One of the most photographed spots on earth. Go before the tour buses roll in.',
         tone: 'lake',
         tags: [{ label: 'photo', tone: 'photo' }],
       },
@@ -188,7 +206,7 @@ const days: DayItem[] = [
         time: 'Midday',
         name: 'Saskatchewan River Crossing — gas + food',
         description:
-          'The only gas station between Lake Louise and Jasper. Fill up regardless of how full you are. Basic café here too. Then continue north toward the Columbia Icefield.',
+          'The only gas station between Lake Louise and Jasper. Fill up regardless of how full we are. Basic café here too. Then continue north toward the Columbia Icefield.',
         tone: 'stone',
         tags: [
           { label: 'food', tone: 'food' },
@@ -199,7 +217,7 @@ const days: DayItem[] = [
         time: 'Afternoon',
         name: 'Columbia Icefield + Athabasca Glacier',
         description:
-          "Largest icefield in the Canadian Rockies. Walk right up to the toe of the Athabasca Glacier for free — markers showing how far it's retreated are genuinely sobering. Optional: Ice Explorer bus onto the glacier surface (~$75 CAD) or Glacier Skywalk glass platform (~$30 CAD). The walk-up alone is worth it.",
+          "Largest icefield in the Canadian Rockies. Walk right up to the toe of the Athabasca Glacier. Optional: Ice Explorer bus onto the glacier surface (~$75 CAD) or Glacier Skywalk glass platform (~$30 CAD). The walk-up alone is worth it.",
         tone: 'forest',
         tags: [
           { label: 'photo', tone: 'photo' },
@@ -219,24 +237,23 @@ const days: DayItem[] = [
       },
     ],
     camp: {
-      name: '⛺ Wilcox Creek — Columbia Icefield, Jasper NP',
-      badge: 'First come, first served',
-      badgeTone: 'fcfs',
-      stars: '★★★★★',
+      name: '⛺ Whistlers Campground, Jasper NP',
+      badge: 'Booked',
+      badgeTone: 'booked',
       detail:
-        "46 sites at the base of the Columbia Icefield — some with direct glacier views. Fits campervans under 27ft. Pit toilets, cooking shelters, fire pits. ~$26 CAD/night. Windy but extraordinary. You're sleeping at the largest icefield in the Rockies. Arrive by noon to be sure of a spot.",
+        "Booked site 26E. Largest campground in Jasper, recently renovated. Has hot showers, trail into town. Not the prettiest but the most convenient for two nights in Jasper. Operating at reduced capacity due to 2024 wildfire.",
     },
   },
   {
     badge: 'Day 5',
     title: 'Athabasca Falls → Jasper Town',
-    subtitle: 'Final Parkway stretch · two waterfalls · arrive Jasper',
+    subtitle: 'See end of parkway · two waterfalls · arrive Jasper',
     events: [
       {
         time: 'Morning',
         name: 'Sunwapta Falls + Athabasca Falls',
         description:
-          'Two roaring waterfalls in the northern stretch. Sunwapta plunges into a narrow canyon — 15 min walk. Athabasca Falls is the most powerful waterfall in the Rockies, carving through a basalt gorge — 10 min walk and completely spectacular. Both uncrowded in the early morning.',
+          'Two roaring waterfalls in the northern stretch of icefields parkway. Sunwapta plunges into a narrow canyon — 15 min walk. Athabasca Falls is the most powerful waterfall in the Rockies, carving through a basalt gorge — 10 min walk. Both uncrowded in the early morning.',
         tone: 'lake',
         tags: [
           { label: 'photo', tone: 'photo' },
@@ -245,9 +262,9 @@ const days: DayItem[] = [
       },
       {
         time: 'Midday',
-        name: 'Arrive Jasper townsite',
+        name: 'Jasper townsite',
         description:
-          'Smaller and way less commercial than Banff — it has a real town feel. Restock van at the IGA grocery store. Lunch at Jasper Brewing Company (first national park brewery in Canada, great food). Walk the main street, pick up any supplies.',
+          'Smaller and way less commercial than Banff — feels like a real town. Restock van at the IGA grocery store if we need it. Lunch at Jasper Brewing Company (first national park brewery in Canada, great food). Walk main street.',
         tone: 'forest',
         tags: [{ label: 'food', tone: 'food' }],
       },
@@ -261,15 +278,12 @@ const days: DayItem[] = [
       },
     ],
     camp: {
-      name: '⛺ Whistlers — Jasper National Park',
-      badge: 'Book now',
-      badgeTone: 'res',
-      stars: '★★★',
+      name: '⛺ Whistlers Campground, Jasper NP',
+      badge: 'Booked',
+      badgeTone: 'booked',
       detail:
-        'Largest campground in Jasper (781 sites), recently renovated. Has hot showers, sani-dump, trail into town. ~$35–42 CAD/night unserviced. Not the prettiest but the most convenient for two nights in Jasper. Operating at reduced capacity in 2026 due to 2024 wildfire — book as early as possible at reservation.pc.gc.ca.',
-    },
-    warning:
-      "⚠️ Whistlers reduced capacity in 2026 due to Jasper wildfire recovery. If it's sold out, try Wapiti Campground (also near Jasper town) or Honeymoon Lake (~30km south, beautiful lakeside setting, first-come-first-served).",
+        "Night 2 at 26E.",
+    }
   },
   {
     badge: 'Day 6',
@@ -299,22 +313,22 @@ const days: DayItem[] = [
         time: 'Evening',
         name: 'Jasper dark sky viewing',
         description:
-          "Jasper is a UNESCO Dark Sky Preserve — one of the largest in the world. In mid-June it doesn't fully darken until ~11pm but if you stay up the stars are extraordinary. Drive a few km from camp to escape any glow from town. No equipment needed.",
+          "Jasper is a UNESCO Dark Sky Preserve — one of the largest in the world. In mid-June it doesn't fully darken until ~11pm but if we stay up the stars will be epic. Drive a few km from camp to escape any glow from town.",
         tone: 'amber',
         tags: [{ label: 'photo', tone: 'photo' }],
       },
     ],
     camp: {
-      name: '⛺ Whistlers — Night 2',
-      badge: 'Same site',
-      badgeTone: 'res',
+      name: '⛺ Whistlers Campground, Jasper NP',
+      badge: 'Booked',
+      badgeTone: 'booked',
       detail:
-        'Second night in Jasper. Use the showers, do laundry if needed. Cook a proper dinner in camp — Jasper restaurants are pricey. The Downstream Bar if you want one last dinner out in town.',
+        "Night 3 at 26E. Last night :(",
     },
   },
   {
     badge: 'Day 7',
-    title: 'Valley of Five Lakes → Calgary → Fly Home',
+    title: 'Valley of Five Lakes → Calgary',
     subtitle: 'Last morning hike · 4 hr drive · return van',
     events: [
       {
@@ -330,28 +344,55 @@ const days: DayItem[] = [
       },
       {
         time: 'Mid-morning',
-        name: 'Drive Jasper → Calgary via Hwy 16 (4–4.5 hrs)',
+        name: 'Drive Jasper → Calgary (4–4.5 hrs)',
         description:
-          'East through the foothills back to Calgary. Stop in Hinton for coffee. Clean out the van before returning — most companies charge cleaning fees if left messy. Return van at Calgary depot.',
+          'East through the foothills back to Calgary. Stop in Hinton. Clean out the van.',
         tone: 'stone',
         tags: [{ label: 'drive', tone: 'drive' }],
       },
-      {
-        time: 'Afternoon',
-        name: 'Fly home from Calgary YYC',
+            {
+        time: '4:00pm',
+        name: 'Return Van',
         description:
-          "Book an afternoon or evening flight — don't cut it close. Allow 2.5 hrs at the airport. The van depot to YYC is typically 15–30 mins.",
-        tone: 'amber',
+          'Say goodbye to our close personal friend :(',
+        tone: 'stone',
+        tags: [{ label: 'drive', tone: 'drive' }],
       },
     ],
     camp: {
-      name: '💰 Full week camping cost',
+      name: '🏨 Hotel night!',
+      badge: 'NEED TO BOOK',
+      badgeTone: 'res',
       detail:
-        'Two Jack Lakeside ×2 nights: ~$90 CAD · Waterfowl Lakes ×1: ~$30 CAD · Wilcox Creek ×1: ~$26 CAD · Whistlers ×2: ~$80 CAD · Total: ~$226 CAD (~$165 USD) for the week · vs $2,000+ in hotels · If your dates fall after June 19: free park admission + 25% off camping saves even more.',
+        'Alyssa Bobissa\'s job to find dis lol',
     },
-    tip:
-      'Book right now: Two Jack Lakeside and Whistlers are both reservable at reservation.pc.gc.ca. Waterfowl and Wilcox Creek are first-come-first-served — just arrive before noon each day. Also book the Moraine Lake shuttle and Spirit Island cruise ASAP — both sell out weeks in advance.',
-  },
+    },
+      {
+    badge: 'Day 8',
+    title: 'Explore Calgary → Fly Home',
+    subtitle: 'YYC → BOS',
+    events: [
+      {
+        time: 'Morning',
+        name: 'Explore Calgary',
+        description:
+          "Idk if there's anything that cool lol.",
+        tone: 'forest',
+      },
+      {
+        time: '3:30pm',
+        name: 'Fly home',
+        description:
+          'WS 1626 YYC-Boston. Get to airport at like 1:30.',
+        tone: 'stone',
+      },
+    ],
+    camp: {
+      name: 'The end :(',
+      detail:
+        'Gonna be epic.',
+    },
+    },
 ]
 
 const dotToneClass: Record<DotTone, string> = {

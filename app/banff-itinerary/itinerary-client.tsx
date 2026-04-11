@@ -37,6 +37,7 @@ const days: DayItem[] = [
   {
     badge: 'Day 0',
     title: 'Fly to Calgary',
+    subtitle: 'Evening flight · hotel night',
     events: [
       {
         time: '6:30pm',
@@ -412,6 +413,7 @@ const tagToneClass: Record<TagTone, string> = {
 const badgeToneClass: Record<BadgeTone, string> = {
   res: styles.badgeRes,
   fcfs: styles.badgeFcfs,
+  booked: styles.badgeBooked,
 }
 
 export function ItineraryClient() {

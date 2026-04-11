@@ -158,6 +158,11 @@ const work = [
 
 const projects = [
   {
+    name: "Banff Campervan Itinerary",
+    description: "An interactive page built from a custom Banff + Jasper road trip itinerary artifact.",
+    url: "/banff-itinerary",
+  },
+  {
     name: "Personal Website",
     description: "Made this site from scratch as an intro to web dev. Some AI + some me!",
     url: "https://github.com/sampolz/portfolio",

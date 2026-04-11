@@ -1,0 +1,437 @@
+.page {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 5rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.navLink {
+  font-size: 0.9rem;
+  color: rgb(115 115 115);
+  transition: color 150ms ease;
+}
+
+.navLink:hover {
+  color: rgb(23 23 23);
+}
+
+:global(html.dark) .navLink:hover {
+  color: rgb(245 245 245);
+}
+
+.brand {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.shell {
+  max-width: 52rem;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgb(115 115 115);
+}
+
+.title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.5rem, 6vw, 4.25rem);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+  margin: 0;
+}
+
+.title em {
+  color: #5a8a5a;
+  font-style: italic;
+}
+
+.dek {
+  max-width: 40rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgb(82 82 82);
+}
+
+:global(html.dark) .dek {
+  color: rgb(212 212 212);
+}
+
+.tabs {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.tab {
+  border: 1px solid rgb(229 229 229);
+  border-radius: 999px;
+  background: transparent;
+  color: rgb(115 115 115);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.45rem 0.8rem;
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+
+.tabActive {
+  background: #3b5e3b;
+  border-color: #3b5e3b;
+  color: white;
+}
+
+:global(html.dark) .tab {
+  border-color: rgb(38 38 38);
+  color: rgb(163 163 163);
+}
+
+.card {
+  border: 1px solid rgb(229 229 229);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(8px);
+}
+
+:global(html.dark) .card {
+  border-color: rgb(38 38 38);
+  background: rgba(10, 10, 10, 0.92);
+}
+
+.cardHead {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1.25rem 1.35rem 1rem;
+  border-bottom: 1px solid rgb(229 229 229);
+}
+
+:global(html.dark) .cardHead {
+  border-bottom-color: rgb(38 38 38);
+}
+
+.dayBadge {
+  display: inline-flex;
+  padding: 0.28rem 0.65rem;
+  border-radius: 999px;
+  background: #3b5e3b;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.dayTitle {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.5rem;
+  line-height: 1.15;
+}
+
+.daySub {
+  margin-top: 0.2rem;
+  font-size: 0.85rem;
+  color: rgb(115 115 115);
+}
+
+.cardBody {
+  padding: 1.2rem 1.35rem 1.35rem;
+}
+
+.timeline {
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0.45rem;
+  top: 0.45rem;
+  bottom: 0.45rem;
+  width: 1px;
+  background: rgb(229 229 229);
+}
+
+:global(html.dark) .timeline::before {
+  background: rgb(38 38 38);
+}
+
+.event {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1rem 1fr;
+  gap: 1rem;
+  margin-bottom: 1.15rem;
+}
+
+.event:last-child {
+  margin-bottom: 0;
+}
+
+.dot {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  z-index: 1;
+  margin-top: 0.2rem;
+}
+
+.dotInner {
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 999px;
+  background: white;
+}
+
+.forest {
+  background: #3b5e3b;
+}
+
+.lake {
+  background: #3a7ca5;
+}
+
+.amber {
+  background: #c4913a;
+}
+
+.stone {
+  background: #7a6b5a;
+}
+
+.eventTime {
+  font-size: 0.7rem;
+  color: rgb(115 115 115);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.eventName {
+  margin-top: 0.15rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.eventDesc {
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: rgb(82 82 82);
+}
+
+:global(html.dark) .eventDesc,
+:global(html.dark) .daySub {
+  color: rgb(163 163 163);
+}
+
+.tags {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.tag {
+  border-radius: 999px;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.tagHike {
+  background: rgba(59, 94, 59, 0.1);
+  color: #3b5e3b;
+}
+
+.tagPhoto {
+  background: rgba(58, 124, 165, 0.12);
+  color: #2a6a96;
+}
+
+.tagFood {
+  background: rgba(196, 145, 58, 0.12);
+  color: #8a6520;
+}
+
+.tagDrive {
+  background: rgba(122, 107, 90, 0.15);
+  color: #6a5a48;
+}
+
+.campBox,
+.tip,
+.warn {
+  margin-top: 1rem;
+  border-radius: 0.9rem;
+  padding: 0.9rem 1rem;
+}
+
+.campBox {
+  background: rgba(59, 94, 59, 0.06);
+  border: 1px solid rgba(59, 94, 59, 0.2);
+}
+
+.campRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.campName {
+  flex: 1;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #3b5e3b;
+}
+
+.campBadge {
+  border-radius: 999px;
+  padding: 0.22rem 0.55rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.badgeRes {
+  background: rgba(180, 30, 30, 0.1);
+  color: #b41e1e;
+}
+
+.badgeFcfs {
+  background: rgba(196, 145, 58, 0.12);
+  color: #8a6520;
+}
+
+.stars {
+  margin-top: 0.2rem;
+  color: #c4913a;
+  font-size: 0.8rem;
+}
+
+.campDetail,
+.tip,
+.warn {
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+.campDetail {
+  margin-top: 0.4rem;
+  color: rgb(82 82 82);
+}
+
+:global(html.dark) .campDetail {
+  color: rgb(212 212 212);
+}
+
+.tip {
+  background: rgba(58, 124, 165, 0.08);
+  border: 1px solid rgba(58, 124, 165, 0.22);
+  color: #2a6a96;
+}
+
+.warn {
+  background: rgba(196, 145, 58, 0.08);
+  border: 1px solid rgba(196, 145, 58, 0.25);
+  color: #8a6520;
+}
+
+.navRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.navButton {
+  border: 1px solid rgb(229 229 229);
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  font-size: 0.88rem;
+  padding: 0.65rem 1rem;
+  cursor: pointer;
+  transition: opacity 150ms ease, border-color 150ms ease;
+}
+
+.navButton:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+:global(html.dark) .navButton {
+  border-color: rgb(38 38 38);
+}
+
+.footer {
+  display: flex;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgb(229 229 229);
+  font-size: 0.75rem;
+  color: rgb(163 163 163);
+}
+
+:global(html.dark) .footer {
+  border-top-color: rgb(38 38 38);
+}
+
+.footerSpacer {
+  margin-left: auto;
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding-top: 1.5rem;
+    padding-bottom: 3rem;
+  }
+
+  .nav {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+
+  .navLinks {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .cardHead,
+  .campRow,
+  .navRow {
+    flex-direction: column;
+  }
+
+  .navRow {
+    align-items: stretch;
+  }
+}

@@ -100,9 +100,9 @@ const days: DayItem[] = [
     events: [
       {
         time: '5:00 AM',
-        name: 'Moraine Lake sunrise',
+        name: 'Sunrise (?)',
         description:
-          'BOOKING ON WEDNESDAY. Pre-booked Parks Canada shuttle from Lake Louise Park & Ride. Cannot drive to Moraine Lake. Valley of Ten Peaks reflected in turquoise water at first light. Scramble the Rockpile. Spend 2+ hours here. Will be lit.',
+          'OPTION 1: Try to book Parks Canada shuttle to Moraine Lake for 4am sunrise. OPTION 2: drive to Lake Louise and maybe do Little Beehive hike super early for sunrise. OPTION 3: Go to Moraine lake but not sunrise.',
         tone: 'forest',
         tags: [
           { label: 'photo', tone: 'photo' },
@@ -111,9 +111,9 @@ const days: DayItem[] = [
       },
       {
         time: 'Mid-morning',
-        name: 'Consolation Lakes hike from Moraine Lake',
+        name: 'TBD',
         description:
-          '5.8km round trip through boulder fields to a turquoise lake ringed by cliffs. Easy-moderate, low crowds, stunning. Start while still at Moraine before the shuttle back.',
+          'If Option 1: take connector to Lake Louise, do teahouse hike + little and/or big Beehive or Plain of Six Glaciers trail. If Option 2: We\'ll be dead so nap time :). If Option 3: Valley of the Ten Peaks / Sentinel Pass hike.',
         tone: 'lake',
         tags: [
           { label: 'hike', tone: 'hike' },
@@ -121,14 +121,12 @@ const days: DayItem[] = [
         ],
       },
       {
-        time: 'Afternoon',
-        name: 'Lake Louise + Plain of Six Glaciers hike',
+        time: 'Afternoon/Evening',
+        name: 'Recover',
         description:
-          "Shuttle connects Moraine to Lake Louise. Walk the famous turquoise lakeshore then hike the Plain of Six Glaciers trail (13.8km round trip, moderate) to a teahouse perched beneath Victoria Glacier. Cash only at the teahouse. 'Best hot chocolate you'll ever have' :D (sorry Alyssa). Ride or hike back down as light fades.",
+          "We will be dead at this point. Eat. Sleep.",
         tone: 'amber',
         tags: [
-          { label: 'hike', tone: 'hike' },
-          { label: 'photo', tone: 'photo' },
           { label: 'food', tone: 'food' },
         ],
       },
@@ -141,7 +139,7 @@ const days: DayItem[] = [
         'Return to B45. Two nights here!',
     },
     warning:
-      '⚠️ Book Moraine Lake shuttle now — Parks Canada shuttle opens April 15 or  2 days before our visit at 8am MT and sells out in minutes. Or book a guided sunrise tour which guarantees access. Search "Moraine Lake shuttle 2026" at parks.canada.ca.',
+      '⚠️ Book Moraine Lake shuttle 2 days before at 8am MT, sells out in minutes. Or book a private shuttle which guarantees access.',
   },
   {
     badge: 'Day 3',

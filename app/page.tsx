@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main className="mx-auto max-w-3xl px-6 py-16">
       {/* Nav */}
-      <nav className="mb-14 flex items-center justify-between gap-8">
+      <nav className="mb-9 flex items-center justify-between gap-8">
         <span className="text-[1.9rem] font-semibold tracking-tight text-neutral-900 dark:text-white">Sam Polyakov</span>
         <div className="flex items-center gap-5 text-[0.95rem]">
           <a href="/" className="text-neutral-500 transition-colors hover:text-neutral-900 dark:hover:text-neutral-100">Home</a>
@@ -17,29 +17,29 @@ export default function Home() {
       </nav>
 
       {/* Bio */}
-      <section className="mb-14 border-y border-dashed border-neutral-300 py-5 dark:border-neutral-700">
+      <section className="mb-7 py-5">
         <div className="space-y-5">
-        <p className="text-[1.02rem] leading-8 text-neutral-700 dark:text-neutral-300">
+        <p className="text-[1.02rem] leading-8 text-neutral-700 dark:text-white">
           I'm a senior CS major at{" "}
           <a href="https://colby.edu/" target="_blank" rel="noopener noreferrer" className="font-medium text-neutral-900 underline underline-offset-4 dark:text-white">Colby College</a>
           , passionate about architecture, sculpture, and education. At school, I am a TA and Tutor for the CS department, and president of the Coding Club 
           - a program where we go to the local high school and help out in CS classes.
         </p>
-        <p className="text-[1.02rem] leading-8 text-neutral-700 dark:text-neutral-300">
+        <p className="text-[1.02rem] leading-8 text-neutral-700 dark:text-white">
           I spent this past summer interning at <a href="https://apple.com/" target="_blank" rel="noopener noreferrer" className="font-medium text-neutral-900 underline underline-offset-4 dark:text-white">Apple</a>{" "}
           as a Software Engineer working on AppleConnect (Apple's internal SSO portal & VPN) and recieved a full-time return offer.
         </p>
-        <p className="text-[1.02rem] leading-8 text-neutral-700 dark:text-neutral-300">
+        <p className="text-[1.02rem] leading-8 text-neutral-700 dark:text-white">
           Prior to Apple, I spent 2 summers interning at <a href="https://teradyne.com/" target="_blank" rel="noopener noreferrer" className="font-medium text-neutral-900 underline underline-offset-4 dark:text-white">Teradyne</a>
           , also as a Software Engineer. In high school, I spent 3 summers interning in business development at{" "}
           <a href="https://www.legendsoflearning.com/" target="_blank" rel="noopener noreferrer" className="font-medium text-neutral-900 underline underline-offset-4 dark:text-white">Legends of Learning</a> 
           , a startup building a platform of educational games for K-8 students.
         </p>
-        <p className="text-[1.02rem] leading-8 text-neutral-700 dark:text-neutral-300">
+        <p className="text-[1.02rem] leading-8 text-neutral-700 dark:text-white">
           I'm also planning a trip to Banff National Park in a campervan with my girlfriend! Check out the{" "}
           <a href="/banff-itinerary" target="_blank" rel="noopener noreferrer" className="font-medium text-neutral-900 underline underline-offset-4 dark:text-white">intinerary</a> 😁.
         </p>
-        <p className="text-[1.02rem] leading-8 text-neutral-700 dark:text-neutral-300">
+        <p className="text-[1.02rem] leading-8 text-neutral-700 dark:text-white">
           Feel free to reach out at{" "}
           <a href="mailto:sam.polyakov@gmail.com" className="font-medium text-neutral-900 underline underline-offset-4 dark:text-white">
             sam.polyakov[at]gmail[dot]com
@@ -50,9 +50,9 @@ export default function Home() {
       </section>
 
       {/* Work */}
-      <section className="mb-12">
+      <section className="mb-6">
         <h2 className="mb-5 text-sm font-semibold uppercase tracking-[0.18em] text-neutral-700 dark:text-white">Work</h2>
-        <div className="border-y border-dashed border-neutral-300 dark:border-neutral-700">
+        <div className="border-t border-dashed border-neutral-300 dark:border-neutral-700">
           {work.map((item, index) => {
             return (
               <div
@@ -115,9 +115,9 @@ export default function Home() {
       </section>
 
       {/* Projects */}
-      <section className="mb-12">
+      <section className="mb-6">
         <h2 className="mb-5 text-sm font-semibold uppercase tracking-[0.18em] text-neutral-700 dark:text-white">Projects</h2>
-        <div className="border-y border-dashed border-neutral-300 dark:border-neutral-700">
+        <div className="border-t border-dashed border-neutral-300 dark:border-neutral-700">
           {projects.map((item, index) => (
             <div
               key={item.name}

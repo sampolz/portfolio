@@ -11,7 +11,7 @@ export default function Home() {
           <a href="/banff-itinerary" className="text-neutral-500 transition-colors hover:text-neutral-900 dark:hover:text-neutral-100">Banff</a>
           <a href="https://github.com/sampolz" target="_blank" rel="noopener noreferrer" className="text-neutral-500 transition-colors hover:text-neutral-900 dark:hover:text-neutral-100">GitHub</a>
           <a href="https://linkedin.com/in/sam-polyakov" target="_blank" rel="noopener noreferrer" className="text-neutral-500 transition-colors hover:text-neutral-900 dark:hover:text-neutral-100">LinkedIn</a>
-          <a href="https://drive.google.com/file/d/1dbd2a8eLE3WiQ4Jy2qpTubPY2GPMZKZy/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-neutral-500 transition-colors hover:text-neutral-900 dark:hover:text-neutral-100">Resume</a>
+          <a href="https://drive.google.com/file/d/1A-ajNw37OH_Ke4vLhvhnfYRniKx_aRK_/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-neutral-500 transition-colors hover:text-neutral-900 dark:hover:text-neutral-100">Resume</a>
           <ThemeToggle />
         </div>
       </nav>

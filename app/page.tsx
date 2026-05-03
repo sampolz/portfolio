@@ -37,7 +37,7 @@ export default function Home() {
         </p>
         <p className="text-[1.02rem] leading-8 text-neutral-700 dark:text-white">
           I'm also planning a trip to Banff National Park in a campervan with my girlfriend! Check out the{" "}
-          <a href="/banff-itinerary" target="_blank" rel="noopener noreferrer" className="font-medium text-neutral-900 underline underline-offset-4 dark:text-white">intinerary</a> 😁.
+          <a href="/banff-itinerary" target="_blank" rel="noopener noreferrer" className="font-medium text-neutral-900 underline underline-offset-4 dark:text-white">itinerary</a> 😁.
         </p>
         <p className="text-[1.02rem] leading-8 text-neutral-700 dark:text-white">
           Feel free to reach out at{" "}

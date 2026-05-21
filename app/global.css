@@ -247,6 +247,10 @@ html.light .prose p {
   color: #262626;
 }
 
+.logo-light {
+  display: block;
+}
+
 .logo-dark {
   display: none;
 }
@@ -257,4 +261,12 @@ html.dark .logo-light {
 
 html.dark .logo-dark {
   display: block;
+}
+
+html.light .logo-light {
+  display: block;
+}
+
+html.light .logo-dark {
+  display: none;
 }

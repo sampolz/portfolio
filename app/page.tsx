@@ -1,4 +1,5 @@
 import { ThemeToggle } from 'app/components/theme-toggle'
+import { work, projects } from 'app/data'
 
 export default function Home() {
   return (
@@ -27,7 +28,7 @@ export default function Home() {
         </p>
         <p className="text-[1.02rem] leading-8 text-neutral-700 dark:text-white">
           I spent this past summer interning at <a href="https://apple.com/" target="_blank" rel="noopener noreferrer" className="font-medium text-neutral-900 underline underline-offset-4 dark:text-white">Apple</a>{" "}
-          as a Software Engineer working on AppleConnect (Apple's internal SSO portal & VPN) and recieved a full-time return offer.
+          as a Software Engineer working on AppleConnect (Apple's internal SSO portal & VPN) and received a full-time return offer.
         </p>
         <p className="text-[1.02rem] leading-8 text-neutral-700 dark:text-white">
           Prior to Apple, I spent 2 summers interning at <a href="https://teradyne.com/" target="_blank" rel="noopener noreferrer" className="font-medium text-neutral-900 underline underline-offset-4 dark:text-white">Teradyne</a>
@@ -148,72 +149,3 @@ export default function Home() {
     </main>
   )
 }
-
-const work = [
-  {
-    company: "Apple",
-    url: "https://apple.com/",
-    logoLight: "/logos/apple-light.png",
-    logoDark: "/logos/apple-dark.jpg",
-    experiences: [
-      {
-        role: "Software Engineering Intern",
-        year: "2025",
-      },
-    ],
-  },
-  {
-    company: "Teradyne",
-    url: "https://teradyne.com/",
-    logo: "/logos/teradyne.jpeg",
-    experiences: [
-      {
-        role: "Software Engineering Intern 2",
-        year: "2024",
-      },
-      {
-        role: "Software Engineering Intern 1",
-        year: "2023",
-      },
-    ],
-  },
-  {
-    company: "Colby College",
-    url: "https://colby.edu/",
-    logo: "/logos/colby.svg",
-    experiences: [
-      {
-        role: "Coding Club President",
-        year: "2025-2026",
-      },
-      {
-        role: "Computer Science TA and Tutor",
-        year: "2023-2025",
-      },
-    ],
-  },
-  {
-    company: "Legends of Learning",
-    url: "https://legendsoflearning.com/",
-    logo: "/logos/legendsoflearning.png",
-    experiences: [
-      {
-        role: "Business Development Intern",
-        year: "2020-2022",
-      },
-    ],
-  },
-]
-
-const projects = [
-  {
-    name: "Personal Website",
-    description: "Made this site from scratch as an intro to web dev. Some AI + some me!",
-    url: "https://github.com/sampolz/portfolio",
-  },
-  {
-    name: "Neural Networks",
-    description: "Various NN projects I've worked on over the past year",
-    url: "https://github.com/sampolz/Neural-Networks",
-  },
-]

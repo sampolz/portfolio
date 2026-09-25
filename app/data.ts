@@ -26,6 +26,10 @@ export const work: WorkItem[] = [
     logoDark: "/logos/apple-dark.jpg",
     experiences: [
       {
+        role: "Software Engineer",
+        year: "2026-Present",
+      },
+      {
         role: "Software Engineering Intern",
         year: "2025",
       },

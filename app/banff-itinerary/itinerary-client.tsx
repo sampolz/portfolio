@@ -49,10 +49,10 @@ const days: DayItem[] = [
     ],
     camp: {
       name: '🏨 Hotel night!',
-      badge: 'NEED TO BOOK',
-      badgeTone: 'res',
+      badge: 'Booked',
+      badgeTone: 'booked',
       detail:
-        'Alyssa Bobissa\'s job to find dis',
+        'Calgary airport hotel',
     },
   },
   {
@@ -64,15 +64,15 @@ const days: DayItem[] = [
         time: '8:00am',
         name: 'Pick up campervan + big grocery run',
         description:
-          'Collect van in Calgary then stop at Superstore or Costco before heading to the mountains. Stock up for the full week — food is 2–3x more expensive inside the parks. Fill the tank fully.',
+          'Collect van in Calgary then stop at Superstore  before heading to the park. Stock up for the full week — food is 2–3x more expensive inside the parks.',
         tone: 'stone',
         tags: [{ label: 'drive', tone: 'drive' }],
       },
       {
         time: 'Afternoon',
-        name: 'Drive to Banff (1.5 hrs) · explore town',
+        name: 'Drive to Canmore (~1 hr) · explore town',
         description:
-          'Walk Banff Ave, stop at the Visitor Centre for maps and trail conditions. Bow Falls is a 10 min walk from town — quick and worth it. Drive the Vermilion Lakes road at golden hour — flat mirror-like water reflecting Mount Rundle. First iconic Rocky Mountain photo of the trip.',
+          'Walk around town. Grab some food, and explore. Pretty chill.',
         tone: 'lake',
         tags: [{ label: 'photo', tone: 'photo' }],
       },
@@ -90,19 +90,19 @@ const days: DayItem[] = [
       badge: 'Booked',
       badgeTone: 'booked',
       detail:
-        'Site B45. Should have pretty views :)',
+        'Site B45. Walk around campground for good views and wildlife.',
     },
   },
   {
     badge: 'Day 2',
-    title: 'Moraine Lake Sunrise + Lake Louise',
+    title: 'Moraine Lake + Lake Louise',
     subtitle: 'The two most iconic lakes in Canada · pre-book shuttle',
     events: [
       {
-        time: '5:00 AM',
-        name: 'Sunrise (?)',
+        time: '9:00 AM',
+        name: 'Lake Louise',
         description:
-          'OPTION 1: Try to book Parks Canada shuttle to Moraine Lake for 4am sunrise. OPTION 2: drive to Lake Louise and maybe do Little Beehive hike super early for sunrise. OPTION 3: Go to Moraine lake but not sunrise.',
+          'Shuttle to Lake Louise. Hike Little Beehive via Lake Agnes Trail',
         tone: 'forest',
         tags: [
           { label: 'photo', tone: 'photo' },
@@ -110,10 +110,10 @@ const days: DayItem[] = [
         ],
       },
       {
-        time: 'Mid-morning',
-        name: 'TBD',
+        time: '3:00pm',
+        name: 'Moraine Lake',
         description:
-          'If Option 1: take connector to Lake Louise, do teahouse hike + little and/or big Beehive or Plain of Six Glaciers trail. If Option 2: We\'ll be dead so nap time :). If Option 3: Valley of the Ten Peaks / Sentinel Pass hike.',
+          'Shuttle to Moraine Lake. Walk to the Rock Scramble and take pics.',
         tone: 'lake',
         tags: [
           { label: 'hike', tone: 'hike' },
@@ -139,18 +139,18 @@ const days: DayItem[] = [
         'Return to B45. Two nights here!',
     },
     warning:
-      '⚠️ Book Moraine Lake shuttle 2 days before at 8am MT, sells out in minutes. Or book a private shuttle which guarantees access.',
+      '⚠️ Book Moraine Lake shuttle 2 days before at 8am MT, sells out in minutes. Or book a private shuttle which guarantees access but is hella $$$',
   },
   {
     badge: 'Day 3',
-    title: 'Johnston Canyon + Drive to Waterfowl Lakes',
-    subtitle: 'Canyon hike · head north on Icefields Parkway',
+    title: 'Rained out mostly :(',
+    subtitle: 'Rain and a lil hike',
     events: [
       {
-        time: '7:30 AM',
-        name: 'Johnston Canyon — Lower Falls, Upper Falls + Ink Pots',
+        time: 'Morning',
+        name: 'Chill',
         description:
-          'Catwalks bolted into canyon walls lead past two dramatic waterfalls to the Ink Pots - five vivid turquoise mineral springs at the top. ~10km total, ~3.5 hrs. Leave early, parking fills by 9am. Note: Bow Valley Parkway has a vehicle restriction on the eastern section — access Johnston via Castle Junction instead, signs will direct.',
+          'Chill inside bc it was raining. Did laundry.',
         tone: 'forest',
         tags: [
           { label: 'hike', tone: 'hike' },
@@ -158,21 +158,10 @@ const days: DayItem[] = [
         ],
       },
       {
-        time: 'Midday',
-        name: 'Drive north → Icefields Parkway',
+        time: '7:00pm',
+        name: 'Marble Canyon',
         description:
-          'Fill gas at Lake Louise village — last affordable gas before Saskatchewan River Crossing. Turn north onto the Icefields Parkway. First stop: Herbert Lake (mirror-flat reflections), then Hector Lake viewpoint. No cell service after this point until Jasper.',
-        tone: 'lake',
-        tags: [
-          { label: 'drive', tone: 'drive' },
-          { label: 'photo', tone: 'photo' },
-        ],
-      },
-      {
-        time: 'Afternoon',
-        name: 'Bow Lake + arrive Waterfowl Lakes',
-        description:
-          "Pull over at Bow Lake, our first major Parkway stop, glacier-fed turquoise water with Crowfoot Glacier looming above, short flat walk along the shore. Then continue to Waterfowl Lakes. Arrive by 2pm to secure a site — it's first-come-first-served. Then chill day :). Need to bring/cook food.",
+          "Alyssa found this place. Bit of a hidden gem. Nice lil hike took like an hour.",
         tone: 'amber',
         tags: [
           { label: 'photo', tone: 'photo' },
@@ -180,43 +169,40 @@ const days: DayItem[] = [
         ],
       },
     ],
-    camp: {
-      name: '⛺ Waterfowl Lakes — Icefields Parkway, Banff',
-      badge: 'First come, first served',
-      badgeTone: 'fcfs',
+      camp: {
+      name: '⛺ Tunnel Mountain Village 1',
+      badge: 'Booked',
+      badgeTone: 'booked',
       detail:
-        'Arguably the most beautiful campground in Canada. Sites right beside a turquoise lake with mountain reflections. 116 sites for tents and campervans. Has sani-dump + water fill (prob won\'t need). ~$26–32 CAD/night. Arrive before 2pm in June for a guaranteed spot.',
+        'Had to book last minute so we were basically in a parking lot lol',
     },
   },
   {
     badge: 'Day 4',
-    title: 'Peyto Lake → Columbia Icefield → Parker Ridge',
+    title: 'Bow Lake → Peyto Lake → Goats and Glaciers',
     subtitle: 'Three unmissable Parkway stops',
     events: [
       {
         time: 'Morning',
-        name: 'Peyto Lake viewpoint',
+        name: 'Bow Lake',
         description:
-          '20 mins north of camp. Short walk (15 mins each way) to a viewpoint above a wolf-head shaped glacial lake in electric blue-green. One of the most photographed spots on earth. Go before the tour buses roll in.',
+          'Right on the road',
         tone: 'lake',
         tags: [{ label: 'photo', tone: 'photo' }],
       },
       {
-        time: 'Midday',
-        name: 'Saskatchewan River Crossing — gas + food',
+        time: 'Morning',
+        name: 'Peyto Lake viewpoint',
         description:
-          'The only gas station between Lake Louise and Jasper. Fill up regardless of how full we are. Basic café here too. Then continue north toward the Columbia Icefield.',
-        tone: 'stone',
-        tags: [
-          { label: 'food', tone: 'food' },
-          { label: 'drive', tone: 'drive' },
-        ],
+          'Short walk (15 mins each way) to a viewpoint. One of the most photographed spots on earth. Was pretty awesome.',
+        tone: 'lake',
+        tags: [{ label: 'photo', tone: 'photo' }],
       },
       {
         time: 'Afternoon',
         name: 'Columbia Icefield + Athabasca Glacier',
         description:
-          "Largest icefield in the Canadian Rockies. Walk right up to the toe of the Athabasca Glacier. Optional: Ice Explorer bus onto the glacier surface (~$75 CAD) or Glacier Skywalk glass platform (~$30 CAD). The walk-up alone is worth it.",
+          "Skip idk it was a big piece of ice. Everything else is cooler",
         tone: 'forest',
         tags: [
           { label: 'photo', tone: 'photo' },

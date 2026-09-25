@@ -21,31 +21,34 @@ export default function Home() {
       <section className="mb-7 py-5">
         <div className="space-y-5">
         <p className="text-[1.02rem] leading-8 text-neutral-700 dark:text-white">
-          I'm a senior CS major at{" "}
-          <a href="https://colby.edu/" target="_blank" rel="noopener noreferrer" className="font-medium text-neutral-900 underline underline-offset-4 dark:text-white">Colby College</a>
-          , passionate about architecture, sculpture, and education. At school, I am a TA and Tutor for the CS department, and president of the Coding Club 
-          - a program where we go to the local high school and help out in CS classes.
+          Hey! I'm Sam, a Software Engineer at{" "}
+          <a href="https://apple.com/" target="_blank" rel="noopener noreferrer" className="font-medium text-neutral-900 underline underline-offset-4 dark:text-white">Apple</a>
+          , where I am a iOS/MacOS engineer on AppleConnect - Apple's internal{" "}
+          <a href="https://en.wikipedia.org/wiki/Single_sign-on" target="_blank" rel="noopener noreferrer" className="font-medium text-neutral-900 underline underline-offset-4 dark:text-white">SSO</a>
+          {" "}and{" "}
+          <a href="https://en.wikipedia.org/wiki/Virtual_private_network" target="_blank" rel="noopener noreferrer" className="font-medium text-neutral-900 underline underline-offset-4 dark:text-white">VPN</a>
+          . Before Apple, I was a student at{" "}
+          <a href="https://colby.edu/" target="_blank" rel="noopener noreferrer" className="font-medium text-neutral-900 underline underline-offset-4 dark:text-white">Colby College</a>,
+          where I graduated in May 2026 with a{" "}
+          <a href="https://cs.colby.edu/curriculum.php#cs-ai" target="_blank" rel="noopener noreferrer" className="font-medium text-neutral-900 underline underline-offset-4 dark:text-white">CS:AI</a>{" "}
+          degree.
         </p>
         <p className="text-[1.02rem] leading-8 text-neutral-700 dark:text-white">
-          I spent this past summer interning at <a href="https://apple.com/" target="_blank" rel="noopener noreferrer" className="font-medium text-neutral-900 underline underline-offset-4 dark:text-white">Apple</a>{" "}
-          as a Software Engineer working on AppleConnect (Apple's internal SSO portal & VPN) and received a full-time return offer.
+          I'm a big foodie, have been getting into woodworking, and love to travel. My girlfriend and I recently went on a trip to Banff - check out our{" "}
+          <a href="/banff-itinerary" target="_blank" rel="noopener noreferrer" className="font-medium text-neutral-900 underline underline-offset-4 dark:text-white">itinerary</a>!
         </p>
         <p className="text-[1.02rem] leading-8 text-neutral-700 dark:text-white">
-          Prior to Apple, I spent 2 summers interning at <a href="https://teradyne.com/" target="_blank" rel="noopener noreferrer" className="font-medium text-neutral-900 underline underline-offset-4 dark:text-white">Teradyne</a>
+          Before starting full time at Apple, I spent one summer interning with my same team, and spent two prior summers interning at <a href="https://teradyne.com/" target="_blank" rel="noopener noreferrer" className="font-medium text-neutral-900 underline underline-offset-4 dark:text-white">Teradyne</a>
           , also as a Software Engineer. In high school, I spent 3 summers interning in business development at{" "}
           <a href="https://www.legendsoflearning.com/" target="_blank" rel="noopener noreferrer" className="font-medium text-neutral-900 underline underline-offset-4 dark:text-white">Legends of Learning</a> 
           , a startup building a platform of educational games for K-8 students.
         </p>
         <p className="text-[1.02rem] leading-8 text-neutral-700 dark:text-white">
-          I'm also planning a trip to Banff National Park in a campervan with my girlfriend! Check out the{" "}
-          <a href="/banff-itinerary" target="_blank" rel="noopener noreferrer" className="font-medium text-neutral-900 underline underline-offset-4 dark:text-white">itinerary</a> 😁.
-        </p>
-        <p className="text-[1.02rem] leading-8 text-neutral-700 dark:text-white">
-          Feel free to reach out at{" "}
+          I love meeting new people and having great conversations. If you're reaching out about an opportunity or just want to chat, feel free to reach out at{" "}
           <a href="mailto:sam.polyakov@gmail.com" className="font-medium text-neutral-900 underline underline-offset-4 dark:text-white">
             sam.polyakov[at]gmail[dot]com
           </a>
-          !
+          ,
         </p>
         </div>
       </section>

@@ -1,8 +1,8 @@
 'use client'
 
-import Link from 'next/link'
 import { useState } from 'react'
-import { ThemeToggle } from 'app/components/theme-toggle'
+import { SiteNav } from 'app/components/site-nav'
+import { SiteFooter } from 'app/components/site-footer'
 import styles from './itinerary.module.css'
 
 type TagTone = 'hike' | 'photo' | 'food' | 'drive'
@@ -211,12 +211,11 @@ const days: DayItem[] = [
       },
       {
         time: 'Late afternoon',
-        name: 'Parker Ridge hike',
+        name: 'Goats and Glaicers',
         description:
-          '3km south of the Icefields Centre. Short steep hike (4.8km round trip, 250m gain, ~2 hrs) above treeline to a ridge with sweeping views of the Saskatchewan Glacier and the whole Columbia Icefield system. Best bang-for-effort hike on the entire Parkway.',
+          'Stopped here for the name. Good views, no goats :(',
         tone: 'amber',
         tags: [
-          { label: 'hike', tone: 'hike' },
           { label: 'photo', tone: 'photo' },
         ],
       },
@@ -234,52 +233,11 @@ const days: DayItem[] = [
     title: 'Athabasca Falls → Jasper Town',
     subtitle: 'See end of parkway · two waterfalls · arrive Jasper',
     events: [
-      {
-        time: 'Morning',
-        name: 'Sunwapta Falls + Athabasca Falls',
-        description:
-          'Two roaring waterfalls in the northern stretch of icefields parkway. Sunwapta plunges into a narrow canyon — 15 min walk. Athabasca Falls is the most powerful waterfall in the Rockies, carving through a basalt gorge — 10 min walk. Both uncrowded in the early morning.',
-        tone: 'lake',
-        tags: [
-          { label: 'photo', tone: 'photo' },
-          { label: 'hike', tone: 'hike' },
-        ],
-      },
-      {
-        time: 'Midday',
-        name: 'Jasper townsite',
-        description:
-          'Smaller and way less commercial than Banff — feels like a real town. Restock van at the IGA grocery store if we need it. Lunch at Jasper Brewing Company (first national park brewery in Canada, great food). Walk main street.',
-        tone: 'forest',
-        tags: [{ label: 'food', tone: 'food' }],
-      },
-      {
-        time: 'Afternoon',
-        name: 'Pyramid Lake + Patricia Lake',
-        description:
-          '7km from Jasper. Two beautiful mountain lakes with stunning reflections. Walk the short bridge out to Pyramid Island — classic sunset spot. Elk and deer commonly wander through at dusk. Great golden hour light on the peaks.',
-        tone: 'amber',
-        tags: [{ label: 'photo', tone: 'photo' }],
-      },
-    ],
-    camp: {
-      name: '⛺ Whistlers Campground, Jasper NP',
-      badge: 'Booked',
-      badgeTone: 'booked',
-      detail:
-        "Night 2 at 26E.",
-    }
-  },
-  {
-    badge: 'Day 6',
-    title: 'Maligne Lake + Maligne Canyon',
-    subtitle: 'Spirit Island boat cruise · deepest canyon · dark skies',
-    events: [
-      {
+    {
         time: 'Morning',
         name: 'Maligne Lake — Spirit Island cruise',
         description:
-          "45 min drive from Jasper. Canada's second largest natural lake — 22km long, ringed by snow-capped peaks with glaciers pouring down. Spirit Island boat cruise (~$80 CAD/person, pre-book) takes you to the most photographed island in Canada, perfectly framed in a turquoise inlet. One of those experiences that genuinely lives up to the hype. Book at banffjaspercollection.com.",
+          "45 min drive from Jasper. Canada's second largest natural lake — 22km long, ringed by snow-capped peaks with glaciers pouring down. Spirit Island boat cruise was the highlight of the whole trip",
         tone: 'lake',
         tags: [{ label: 'photo', tone: 'photo' }],
       },
@@ -298,7 +256,40 @@ const days: DayItem[] = [
         time: 'Evening',
         name: 'Jasper dark sky viewing',
         description:
-          "Jasper is a UNESCO Dark Sky Preserve — one of the largest in the world. In mid-June it doesn't fully darken until ~11pm but if we stay up the stars will be epic. Drive a few km from camp to escape any glow from town.",
+          "Jasper is a UNESCO Dark Sky Preserve - one of the largest in the world.",
+        tone: 'amber',
+        tags: [{ label: 'photo', tone: 'photo' }],
+      },  
+    ],
+    camp: {
+      name: '⛺ Whistlers Campground, Jasper NP',
+      badge: 'Booked',
+      badgeTone: 'booked',
+      detail:
+        "Night 2 at 26E.",
+    }
+  },
+  {
+    badge: 'Day 6',
+    title: 'Maligne Lake + Maligne Canyon',
+    subtitle: 'Spirit Island boat cruise · deepest canyon · dark skies',
+    events: [
+      {
+        time: 'Morning',
+        name: 'Valley of Five Lakes hike',
+        description:
+          "One of Jasper's best easy hikes — 4.5km loop through forest to five lakes each a different shade of teal and turquoise. About 1.5 hrs. Beautiful and not crowded",
+        tone: 'forest',
+        tags: [
+          { label: 'hike', tone: 'hike' },
+          { label: 'photo', tone: 'photo' },
+        ],
+      },
+      {
+        time: 'Afternoon',
+        name: 'Explore Jasper',
+        description:
+          "Found AYCE Indian food. Nomnomnom",
         tone: 'amber',
         tags: [{ label: 'photo', tone: 'photo' }],
       },
@@ -317,21 +308,10 @@ const days: DayItem[] = [
     subtitle: 'Last morning hike · 4 hr drive · return van',
     events: [
       {
-        time: '7:00 AM',
-        name: 'Valley of Five Lakes hike',
-        description:
-          "One of Jasper's best easy hikes — 4.5km loop through forest to five lakes each a different shade of teal and turquoise. About 1.5 hrs. Beautiful and not crowded first thing in the morning. Perfect final hike before the drive back.",
-        tone: 'forest',
-        tags: [
-          { label: 'hike', tone: 'hike' },
-          { label: 'photo', tone: 'photo' },
-        ],
-      },
-      {
         time: 'Mid-morning',
         name: 'Drive Jasper → Calgary (4–4.5 hrs)',
         description:
-          'East through the foothills back to Calgary. Stop in Hinton. Clean out the van.',
+          'East through the foothills back to Calgary. Clean out the van.',
         tone: 'stone',
         tags: [{ label: 'drive', tone: 'drive' }],
       },
@@ -346,10 +326,10 @@ const days: DayItem[] = [
     ],
     camp: {
       name: '🏨 Hotel night!',
-      badge: 'NEED TO BOOK',
-      badgeTone: 'res',
+      badge: 'Booked',
+      badgeTone: 'booked',
       detail:
-        'Alyssa Bobissa\'s job to find dis lol',
+        'Random hotel downtown',
     },
     },
       {
@@ -361,7 +341,7 @@ const days: DayItem[] = [
         time: 'Morning',
         name: 'Explore Calgary',
         description:
-          "Idk if there's anything that cool lol.",
+          "The skybridge system was kinda lit but not much to see other than that.",
         tone: 'forest',
       },
       {
@@ -375,7 +355,7 @@ const days: DayItem[] = [
     camp: {
       name: 'The end :(',
       detail:
-        'Gonna be epic.',
+        'Was epic.',
     },
     },
 ]
@@ -406,23 +386,7 @@ export function ItineraryClient() {
 
   return (
     <main className={styles.page}>
-      <nav className={styles.nav}>
-        <Link href="/" className={styles.brand}>
-          Sam Polyakov
-        </Link>
-        <div className={styles.navLinks}>
-          <Link href="/" className={styles.navLink}>
-            Home
-          </Link>
-          <Link href="/banff-itinerary" className={styles.navLink}>
-            Banff
-          </Link>
-          <a href="https://github.com/sampolz" className={styles.navLink}>
-            GitHub
-          </a>
-          <ThemeToggle />
-        </div>
-      </nav>
+      <SiteNav />
 
       <section className={styles.shell}>
         <h1 className={styles.title}>
@@ -520,15 +484,7 @@ export function ItineraryClient() {
         </article>
       </section>
 
-      <footer className={styles.footer}>
-        <a href="https://github.com/sampolz" className={styles.navLink}>
-          GitHub
-        </a>
-        <a href="https://linkedin.com/in/sam-polyakov" className={styles.navLink}>
-          LinkedIn
-        </a>
-        <span className={styles.footerSpacer}>© Sam Polyakov</span>
-      </footer>
+      <SiteFooter />
     </main>
   )
 }

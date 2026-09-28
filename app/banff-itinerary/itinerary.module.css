@@ -4,39 +4,6 @@
   padding: 4rem 1.5rem 5rem;
 }
 
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 3rem;
-}
-
-.navLinks {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-}
-
-.navLink {
-  font-size: 0.9rem;
-  color: rgb(115 115 115);
-  transition: color 150ms ease;
-}
-
-.navLink:hover {
-  color: rgb(23 23 23);
-}
-
-:global(html.dark) .navLink:hover {
-  color: rgb(245 245 245);
-}
-
-.brand {
-  font-size: 1rem;
-  font-weight: 500;
-}
-
 .shell {
   max-width: 52rem;
 }
@@ -393,24 +360,6 @@
 
 :global(html.dark) .navButton {
   border-color: rgb(38 38 38);
-}
-
-.footer {
-  display: flex;
-  gap: 1rem;
-  margin-top: 3rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid rgb(229 229 229);
-  font-size: 0.75rem;
-  color: rgb(163 163 163);
-}
-
-:global(html.dark) .footer {
-  border-top-color: rgb(38 38 38);
-}
-
-.footerSpacer {
-  margin-left: auto;
 }
 
 @media (max-width: 640px) {

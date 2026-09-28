@@ -1,21 +1,11 @@
-import { ThemeToggle } from 'app/components/theme-toggle'
+import { SiteNav } from 'app/components/site-nav'
+import { SiteFooter } from 'app/components/site-footer'
 import { work, projects } from 'app/data'
 
 export default function Home() {
   return (
     <main className="mx-auto max-w-3xl px-6 py-16">
-      {/* Nav */}
-      <nav className="mb-9 flex items-center justify-between gap-8">
-        <span className="text-[1.9rem] font-semibold tracking-tight text-neutral-900 dark:text-white">Sam Polyakov</span>
-        <div className="flex items-center gap-5 text-[0.95rem]">
-          <a href="/" className="text-neutral-500 transition-colors hover:text-neutral-900 dark:hover:text-neutral-100">Home</a>
-          <a href="/banff-itinerary" className="text-neutral-500 transition-colors hover:text-neutral-900 dark:hover:text-neutral-100">Banff</a>
-          <a href="https://github.com/sampolz" target="_blank" rel="noopener noreferrer" className="text-neutral-500 transition-colors hover:text-neutral-900 dark:hover:text-neutral-100">GitHub</a>
-          <a href="https://linkedin.com/in/sam-polyakov" target="_blank" rel="noopener noreferrer" className="text-neutral-500 transition-colors hover:text-neutral-900 dark:hover:text-neutral-100">LinkedIn</a>
-          <a href="https://drive.google.com/file/d/1A-ajNw37OH_Ke4vLhvhnfYRniKx_aRK_/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-neutral-500 transition-colors hover:text-neutral-900 dark:hover:text-neutral-100">Resume</a>
-          <ThemeToggle />
-        </div>
-      </nav>
+      <SiteNav />
 
       {/* Bio */}
       <section className="mb-7 py-5">
@@ -23,11 +13,8 @@ export default function Home() {
         <p className="text-[1.02rem] leading-8 text-neutral-700 dark:text-white">
           Hey! I'm Sam, a Software Engineer at{" "}
           <a href="https://apple.com/" target="_blank" rel="noopener noreferrer" className="font-medium text-neutral-900 underline underline-offset-4 dark:text-white">Apple</a>
-          , where I am a iOS/MacOS engineer on AppleConnect - Apple's internal{" "}
-          <a href="https://en.wikipedia.org/wiki/Single_sign-on" target="_blank" rel="noopener noreferrer" className="font-medium text-neutral-900 underline underline-offset-4 dark:text-white">SSO</a>
-          {" "}and{" "}
-          <a href="https://en.wikipedia.org/wiki/Virtual_private_network" target="_blank" rel="noopener noreferrer" className="font-medium text-neutral-900 underline underline-offset-4 dark:text-white">VPN</a>
-          . Before Apple, I was a student at{" "}
+          , where I am a iOS/MacOS engineer on AppleConnect - Apple's internal SSO portal, which is used by 150,000+ Apple employees daily.{" "}
+          Before Apple, I was a student at{" "}
           <a href="https://colby.edu/" target="_blank" rel="noopener noreferrer" className="font-medium text-neutral-900 underline underline-offset-4 dark:text-white">Colby College</a>,
           where I graduated in May 2026 with a{" "}
           <a href="https://cs.colby.edu/curriculum.php#cs-ai" target="_blank" rel="noopener noreferrer" className="font-medium text-neutral-900 underline underline-offset-4 dark:text-white">CS:AI</a>{" "}
@@ -143,12 +130,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="flex gap-5 border-t border-dashed border-neutral-300 pt-5 text-sm dark:border-neutral-700">
-        <a href="https://github.com/sampolz" target="_blank" rel="noopener noreferrer" className="text-neutral-500 transition-colors hover:text-neutral-900 dark:hover:text-neutral-100">GitHub</a>
-        <a href="https://linkedin.com/in/sam-polyakov" target="_blank" rel="noopener noreferrer" className="text-neutral-500 transition-colors hover:text-neutral-900 dark:hover:text-neutral-100">LinkedIn</a>
-        <span className="ml-auto text-neutral-400">© Sam Polyakov</span>
-      </footer>
+      <SiteFooter />
     </main>
   )
 }
